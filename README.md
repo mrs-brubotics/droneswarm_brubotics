@@ -6,7 +6,7 @@ The install.sh files will copy-paste the package into ~/workspace/src and build 
 
 You can execute the putongitfolder.sh to put automatically your package on the git folder. DISCLAIMER you have to pull youself the code on the github, don't forget to do add a understandable commit.
 
-#ROS-package
+# ROS-package
 
 *package1 : blablablabla
 *package2 : blablablabla
