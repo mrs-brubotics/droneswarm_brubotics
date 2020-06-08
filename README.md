@@ -8,6 +8,6 @@ You can execute the putongitfolder.sh to put automatically your package on the g
 
 ### ROS-package
 
-*package1 : blablablabla
+* __package1__ : blablablabla
 
-*package2 : blablablabla
+* __package2__ : blablablabla
