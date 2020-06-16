@@ -8,6 +8,10 @@ cd $MY_PATH/..
 git checkout master
 git pull
 
+#pull code from ros_package
+
+cd ./ros_packages/controllers-brubotics
+git pull
 
 #pull code from mrs
 cd ~/git/uav_core/ros_packages

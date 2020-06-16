@@ -9,4 +9,7 @@ ln -sf $MY_PATH/../../Droneswarm
 
 echo "$0: building workspace"
 cd ~/workspace
+
+gitman install
+
 catkin build
