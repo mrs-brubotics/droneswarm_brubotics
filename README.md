@@ -17,6 +17,6 @@ Empty
 
 ## ROS-package
 
-* __package1__ : blablablabla
+* __controllers-brubotics__ : [link to the github](https://github.com/Internship-Brubotics-2020/controllers_brubotics)
 
 * __package2__ : blablablabla
