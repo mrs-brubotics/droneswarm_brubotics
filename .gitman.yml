@@ -1,0 +1,13 @@
+location: .gitman
+sources:
+        - name: controllers-brubotics
+          type: git
+          repo: https://github.com/Internship-Brubotics-2020/controllers_brubotics
+          sparse_paths:
+                  -
+          rev: master
+          link: ros_packages/controllers-brubotics
+          scripts:
+                  - git submodule update --init --recursive
+
+
