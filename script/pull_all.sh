@@ -11,7 +11,10 @@ git pull
 
 #pull code from ros_package
 
-cd ./ros_packages/controllers-brubotics
+cd ./ros_packages/controllers_brubotics
+git pull
+
+cd ../trackers_brubotics
 git pull
 
 #pull code from mrs
