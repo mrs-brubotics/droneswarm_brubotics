@@ -2,7 +2,7 @@ location: .gitman
 sources:
         - name: controllers_brubotics
           type: git
-          repo: https://github.com/Internship-Brubotics-2020/controllers_brubotics
+          repo: git@github.com:Internship-Brubotics-2020/controllers_brubotics.git 
           sparse_paths:
                   -
           rev: master
