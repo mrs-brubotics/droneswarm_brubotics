@@ -10,21 +10,20 @@ git checkout master
 git pull
 
 #pull code from ros_package
-
-cd ./ros_packages/controllers_brubotics
-git pull
-
-cd ../trackers_brubotics
-git pull
+gitman update
 
 #pull code from mrs
-cd ~/git/uav_core/ros_packages
-./pull_all.sh
+cd ~/git/uav_core
+git checkout master
+git pull
 
 cd ~/git/simulation
 git checkout master
 git pull 
 
+#build updated mrs_workspace & workspace
+cd ~/mrs_workspace
+catkin build
 
-#come back to workspace folder
-cd $MY_PATH
+cd ~/workspace
+catkin build
