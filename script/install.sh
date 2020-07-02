@@ -10,8 +10,11 @@ ln -sf $MY_PATH/../../droneswarm_brubotics
 
 echo "$0: install depedencies"
 cd ~/workspace/src/droneswarm_brubotics
-
 gitman install
 
+echo "$0: modify mrs_workspace"
+cd changed_files/
+./change_file.sh
+
 echo "$0: building workspace: NOT AVAILABLE NOW"
-#catkin build
+catkin build

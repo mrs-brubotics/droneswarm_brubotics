@@ -1,0 +1,47 @@
+So3Controller:
+  address: "mrs_uav_controllers/So3Controller"
+  namespace: "so3_controller"
+  eland_threshold: 300 # [m], position error triggering eland
+  failsafe_threshold: 300 # [m], position error triggering failsafe land
+  odometry_innovation_threshold: 300 # [m], position odometry innovation threshold
+
+MpcController:
+  address: "mrs_uav_controllers/MpcController"
+  namespace: "mpc_controller"
+  eland_threshold: 300 # [m], position error triggering eland
+  failsafe_threshold: 300 # [m], position error triggering failsafe land
+  odometry_innovation_threshold: 300 # [m], position odometry innovation threshold
+
+FailsafeController:
+  address: "mrs_uav_controllers/FailsafeController"
+  namespace: "failsafe_controller"
+  eland_threshold: 300 # [m], position error triggering eland
+  failsafe_threshold: 300 # [m], position error triggering failsafe land
+  odometry_innovation_threshold: 300 # [m], position odometry innovation threshold
+
+EmergencyController:
+  address: "mrs_uav_controllers/MpcController"
+  namespace: "emergency_controller"
+  eland_threshold: 300 # [m], position error triggering eland
+  failsafe_threshold: 300 # [m], position error triggering failsafe land
+  odometry_innovation_threshold: 300 # [m], position odometry innovation threshold
+
+## ############### here starts the non-conventional stuff ###############
+
+# This is here for debugging purposes only! The So3Controller is superb to the NsfController
+# in all ways. The Nsf can't be used with other than GPS+COMPASS estimator, since the attiude
+# is controlled by the FlightController. Never activate the NSF controller on a real UAV,
+# unless you are Tomas Baca.
+NsfController:
+  address: "mrs_uav_controllers/NsfController"
+  namespace: "nsf_controller"
+  eland_threshold: 300 # [m], position error triggering eland
+  failsafe_threshold: 300 # [m], position error triggering failsafe land
+  odometry_innovation_threshold: 300 # [m], position odometry innovation threshold
+
+So3ControllerInterns:
+  address: "controllers_brubotics/So3ControllerInterns"
+  namespace: "so3_controller_interns"
+  eland_threshold: 300 # [m], position error triggering eland
+  failsafe_threshold: 300 # [m], position error triggering failsafe land
+  odometry_innovation_threshold: 300 # [m], position odometry innovation threshold
