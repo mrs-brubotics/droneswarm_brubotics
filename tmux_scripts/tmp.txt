@@ -1,1 +1,0 @@
-Delete this files when the first script will be built
