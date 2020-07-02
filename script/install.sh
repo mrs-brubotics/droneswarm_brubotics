@@ -16,5 +16,5 @@ echo "$0: modify mrs_workspace"
 cd changed_files/
 ./change_file.sh
 
-echo "$0: building workspace: NOT AVAILABLE NOW"
+echo "$0: building workspace"
 catkin build
