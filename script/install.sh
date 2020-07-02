@@ -13,4 +13,4 @@ cd ~/workspace
 
 gitman install
 
-catkin build
+#catkin build
