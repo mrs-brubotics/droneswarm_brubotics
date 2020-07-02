@@ -20,10 +20,3 @@ git pull
 cd ~/git/simulation
 git checkout master
 git pull 
-
-#build updated mrs_workspace & workspace
-cd ~/mrs_workspace
-catkin build
-
-cd ~/workspace
-catkin build
