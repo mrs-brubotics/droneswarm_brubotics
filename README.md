@@ -1,4 +1,4 @@
-# Droneswarm
+# droneswarm_brubotics
 
 Based on the work of [Multi-robot Systems Group](https://github.com/ctu-mrs)
 
