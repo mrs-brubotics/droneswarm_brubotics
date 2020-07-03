@@ -1,6 +1,6 @@
 So3Controller:
   address: "mrs_uav_controllers/So3Controller"
-  namespace: "so3_controller"
+  namespace: "se3_controller"
   eland_threshold: 300 # [m], position error triggering eland
   failsafe_threshold: 300 # [m], position error triggering failsafe land
   odometry_innovation_threshold: 300 # [m], position odometry innovation threshold

@@ -12,7 +12,7 @@ trackers : [
 
 # - list of names of dynamically loaded controllers
 controllers : [
-  "So3Controller",
+  "Se3Controller",
   "MpcController",
   "NsfController",
   "FailsafeController",
