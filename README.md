@@ -48,5 +48,6 @@ Contains config files needed to add trackers and controllers
 
 ## Tmux_script 
 
-* __one_drone_interns__ contains tmux script to launch one_drone simulation 
+* __one_drone_interns__ contains tmux script to launch one_drone simulation
+* __two_drones_interns__ contains tmux script to launch two_drones simulation 
 
