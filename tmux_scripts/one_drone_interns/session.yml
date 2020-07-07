@@ -14,7 +14,7 @@ windows:
   - status:
       layout: tiled
       panes:
-        - waitForSimulation; roslaunch mrs_uav_status status.launch
+        - waitForSimulation; history -s roslaunch mrs_uav_status status.launch
   - switch:
       layout: tiled
       panes:
