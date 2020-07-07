@@ -10,7 +10,6 @@ Our automated installation will:
 * clone [droneswarm_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics) into your git folder
 * link it to ```workspace```.
 * install depedencies with rospackages [controllers_brubotics](https://github.com/mrs-brubotics/controllers_brubotics) and [trackers_brubotics](https://github.com/mrs-brubotics/trackers_brubotics) into ```droneswarm/ros_packages```.
-* change files on ```~/mrs_workspace/src/uav_core/config/simulation/t650``` needed for the compilation.
 * Build ```workspace```
 
 To start the automatic installation, please paste the following code into your terminal and press **enter**
@@ -35,14 +34,10 @@ cd ~/workspace/'> clone.sh && source clone.sh
 ## Changed_files
 
 Contains config files needed to add trackers and controllers
-
-* __change_files.sh__ will copy-paste the files on ```~/mrs_workspace/src/uav_core/config/simulation/t650```
-
-* __restore_files.sh__ will restore mrs_workspace
  
 ## Script folder
 
-* __install.sh__ will link the package to ~/workspace/src, install ROS packages, change files on ```~/mrs_workspace/src/uav_core/config/simulation/t650``` and build automatically the packages.
+* __install.sh__ will link the package to ~/workspace/src, install ROS packages, and build automatically the packages.
 
 * __pull_all.sh__ will pull files from this github but also it will pull files for the [mrs_uav_core](https://github.com/ctu-mrs/uav_core) and for [mrs_simulation](https://github.com/ctu-mrs/simulation).
 
