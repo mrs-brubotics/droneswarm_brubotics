@@ -31,7 +31,7 @@ windows:
   - control:
       layout: tiled
       panes:
-        - export UAV_NAME=uav1; waitForOdometry; roslaunch controllers_brubotics controllers_brubotics.launch; roslaunch trackers_brubotics trackers_brubotics.launch; roslaunch mrs_uav_general core.launch config_control_manager:=../../custom_configs/control_manager.yaml config_controllers:=../../custom_configs/controllers.yaml
+        - export UAV_NAME=uav1; waitForOdometry; roslaunch controllers_brubotics controllers_brubotics.launch; roslaunch trackers_brubotics trackers_brubotics.launch; roslaunch mrs_uav_general core.launch config_control_manager:=../../custom_configs/control_manager.yaml config_controllers:=../../custom_configs/controllers.yaml 
         - export UAV_NAME=uav2;  waitForOdometry; roslaunch controllers_brubotics controllers_brubotics.launch; roslaunch trackers_brubotics trackers_brubotics.launch; roslaunch mrs_uav_general core.launch config_control_manager:=../../custom_configs/control_manager.yaml config_controllers:=../../custom_configs/controllers.yaml
   - automatic_start:
       layout: tiled

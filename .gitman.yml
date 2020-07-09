@@ -2,7 +2,7 @@ location: .gitman
 sources:
         - name: controllers_brubotics
           type: git
-          repo: git@github.com:Internship-Brubotics-2020/controllers_brubotics.git
+          repo: git@github.com:mrs-brubotics/controllers_brubotics.git
           sparse_paths:
                   -
           rev: master
@@ -11,7 +11,7 @@ sources:
                   - git submodule update --init --recursive
         - name: trackers_brubotics
           type: git
-          repo: git@github.com:Internship-Brubotics-2020/trackers_brubotics.git
+          repo: git@github.com:mrs-brubotics-2020/trackers_brubotics.git
           sparse_paths:
                   -
           rev: master
