@@ -18,6 +18,12 @@ sources:
           link: ros_packages/trackers_brubotics
           scripts:
                   - git submodule update --init --recursive
-
-
-
+        - name: matlab_graphs
+          type: git
+          repo: https://github.com/mrs-brubotics/MatlabGraphs.git
+          sparse_paths:
+                  -
+          rev: master
+          link: useful_files/matlab_graphs
+          scripts:
+                  - git submodule update --init --recursive
