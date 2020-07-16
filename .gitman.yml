@@ -32,7 +32,7 @@ sources:
           repo: git@github.com:mrs-brubotics/testing_brubotics.git
           sparse_paths:
                   -
-          rev:master
+          rev: master
           link: ros_packages/testing_brubotics
           scripts: 
                   - git submodule update --init --recursive
