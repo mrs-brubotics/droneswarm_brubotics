@@ -27,3 +27,12 @@ sources:
           link: useful_files/matlab_graphs
           scripts:
                   - git submodule update --init --recursive
+        - name: testing_brubotics
+          type: git
+          repo: git@github.com:mrs-brubotics/testing_brubotics.git
+          sparse_paths:
+                  -
+          rev:master
+          link: ros_packages/testing_brubotics
+          scripts: 
+                  - git submodule update --init --recursive
