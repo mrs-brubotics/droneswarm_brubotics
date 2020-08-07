@@ -41,6 +41,10 @@ cd ~/workspace/'> clone.sh && source clone.sh
 
 * __pull_all.sh__ will pull files from this github but also it will pull files for the [mrs_uav_core](https://github.com/ctu-mrs/uav_core) and for [mrs_simulation](https://github.com/ctu-mrs/simulation).
 
+* __overwrite_mrs_files__ will overwrite mrs_workspace files in favour of files that you can find into useful_files/mrs_files/.
+
+* __restore_mrs_files__ will restore mrs_workspace files from the previous overwriting.
+
 ## Shell_addition folder
 
 Contains __shell_additions.sh__ which contains the definition of waitBeforeGoTo, a bash function to detect when GoTo service can be use.
@@ -48,3 +52,5 @@ Contains __shell_additions.sh__ which contains the definition of waitBeforeGoTo,
 ## Useful_files folder
 
 * __matlab_graph__ : [link to the github](https://github.com/mrs-brubotics/MatlabGraphs)
+
+* __mrs_files__ : Contains modified files that we have to implement into mrs_workspace. We can find out, control_manager.cpp used to disable_safety features.
