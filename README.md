@@ -53,4 +53,4 @@ Contains __shell_additions.sh__ which contains the definition of waitBeforeGoTo,
 
 * __matlab_graph__ : [link to the github](https://github.com/mrs-brubotics/MatlabGraphs)
 
-* __mrs_files__ : Contains modified files that we have to implement into mrs_workspace. We can find out, control_manager.cpp used to disable_safety features.
+* __mrs_files__ : Contains modified files that we have to implement into mrs_workspace. In the control_manager.cpp file, disable_safety features are implemented.
