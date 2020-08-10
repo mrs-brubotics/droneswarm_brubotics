@@ -4,6 +4,9 @@
 MY_PATH=`dirname "$0"`
 MY_PATH=`( cd "$MY_PATH" && pwd)`
 
+#if you use overwrite_mrs_files.sh restore mrs files
+./restore_mrs_files.sh
+
 cd $MY_PATH/..
 
 git checkout master
@@ -20,3 +23,5 @@ gitman install
 cd ~/git/simulation
 git pull 
 gitman install
+
+echo "$0: mrs files was restored, please use again overwrite_mrs_files.sh if you use it before pull."
