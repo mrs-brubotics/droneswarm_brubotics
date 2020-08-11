@@ -29,7 +29,7 @@ cd ~/workspace/'> clone.sh && source clone.sh
 
 ## ROS_packages
 
-* __controllers-brubotics__ : [link to the github](https://github.com/mrs-brubotics/controllers_brubotics)
+* __controllers_brubotics__ : [link to the github](https://github.com/mrs-brubotics/controllers_brubotics)
 
 * __trackers_brubotics__ : [link to the github](https://github.com/mrs-brubotics/trackers_brubotics)
 
@@ -37,17 +37,17 @@ cd ~/workspace/'> clone.sh && source clone.sh
 
 ## Script folder
 
-* __install.sh__ will link the package to ~/workspace/src, install ROS packages, and build automatically the packages.
+* __install.sh__ : will link the packages to ~/workspace/src, install ROS packages, and automatically build the packages.
 
-* __pull_all.sh__ will pull files from this github but also it will pull files for the [mrs_uav_core](https://github.com/ctu-mrs/uav_core) and for [mrs_simulation](https://github.com/ctu-mrs/simulation).
+* __pull_all.sh__ : will pull files from this github but also it will pull files for the [mrs_uav_core](https://github.com/ctu-mrs/uav_core) and for [mrs_simulation](https://github.com/ctu-mrs/simulation).
 
-* __overwrite_mrs_files__ will overwrite mrs_workspace files in favour of files that you can find into useful_files/mrs_files/.
+* __overwrite_mrs_files__ : will overwrite mrs_workspace files in favour of files that you can find into useful_files/mrs_files/.
 
-* __restore_mrs_files__ will restore mrs_workspace files from the previous overwriting.
+* __restore_mrs_files__ : will restore mrs_workspace files from the previous overwriting.
 
 ## Shell_addition folder
 
-Contains __shell_additions.sh__ which contains the definition of waitBeforeGoTo, a bash function to detect when GoTo service can be use.
+Contains __shell_additions.sh__ : which contains the definition of waitBeforeGoTo, a bash function to detect when GoTo service can be used.
 
 ## Useful_files folder
 
