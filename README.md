@@ -1,17 +1,17 @@
 # droneswarm_brubotics
 
-Based on the work of [Multi-robot Systems Group](https://github.com/ctu-mrs)
+Based on the work of [Multi-robot Systems Group](https://github.com/ctu-mrs).
 
 ## Installation
-Before you go any further, you have to install ```mrs_workspace``` and ```workspace```, refer yourself to [Multi-robot Systems Group](https://github.com/ctu-mrs/mrs_uav_system#installation).
+Before you go any further, you have to install the mrs_uav_system such that you obtain the```mrs_workspace``` and ```workspace``` folders. Refer yourself to [Multi-robot Systems Group](https://github.com/ctu-mrs/mrs_uav_system#installation).
 
 We provide installation scripts that set everything up for you.
 Our automated installation will:
 * clone [droneswarm_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics) into your git folder
-* source our shell_addition
-* link it to ```workspace```.
-* install depedencies with rospackages [controllers_brubotics](https://github.com/mrs-brubotics/controllers_brubotics), [trackers_brubotics](https://github.com/mrs-brubotics/trackers_brubotics) and [testing_brubotics](https://github.com/mrs-brubotics/testing_brubotics) into ```droneswarm/ros_packages```.
-* Build ```workspace```
+* source our ```shell_additions.sh``` script
+* link it to your```workspace``` folder
+* install depedencies for the rospackages [controllers_brubotics](https://github.com/mrs-brubotics/controllers_brubotics), [trackers_brubotics](https://github.com/mrs-brubotics/trackers_brubotics) and [testing_brubotics](https://github.com/mrs-brubotics/testing_brubotics) into ```droneswarm/ros_packages```.
+* build the```workspace```
 
 To start the automatic installation, please paste the following code into your terminal and press **enter**
 ```bash
@@ -27,7 +27,7 @@ cd droneswarm_brubotics/script/
 cd ~/workspace/'> clone.sh && source clone.sh
 ```
 
-## ROS_package
+## ROS_packages
 
 * __controllers-brubotics__ : [link to the github](https://github.com/mrs-brubotics/controllers_brubotics)
 
