@@ -92,6 +92,6 @@ cd ../mrs_uav_trackers
 git reset --hard origin/master
 git clean -f
 
-cd ~/mrs_workspace
+cd ~/git/mrs_uav_system
 rosclean purge
-catkin build
+./install.sh
