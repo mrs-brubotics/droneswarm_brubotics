@@ -10,8 +10,11 @@ rm droneswarm_brubotics
 cd ../
 catkin clean
 
+cd ~/mrs_workspace
+rosclean purge
+
 echo "$0 : restore simulation"
-cd ~/mrs_workspace/src/simulation
+cd src/simulation
 git reset --hard origin/master
 git clean -f
 
@@ -93,5 +96,4 @@ git reset --hard origin/master
 git clean -f
 
 cd ~/git/mrs_uav_system
-rosclean purge
 ./install.sh
