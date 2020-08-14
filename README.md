@@ -21,7 +21,7 @@ GIT_PATH=~/git
 mkdir -p $GIT_PATH
 cd $GIT_PATH
 git clone https://github.com/mrs-brubotics/droneswarm_brubotics.git
-source droneswarm_brubotics/shell_additions/shell_additions.sh
+source $GIT_PATH/droneswarm_brubotics/shell_additions/shell_additions.sh
 cd droneswarm_brubotics/script/
 ./install.sh
 cd ~/workspace/'> clone.sh && source clone.sh
