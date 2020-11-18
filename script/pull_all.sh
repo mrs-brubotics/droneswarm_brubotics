@@ -25,4 +25,4 @@ git pull
 gitman install
 
 echo "$0: mrs files was restored, please use again overwrite_mrs_files.sh if you use it before pull."
-echo "$0: do not forget to build mrs_workspace and workspace if change have happened."
+echo "$0: do not forget to build mrs_workspace and workspace if changes have happened."
