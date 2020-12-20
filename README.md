@@ -8,7 +8,7 @@ Before you go any further, you have to install the mrs_uav_system such that you 
 The following packages are required dependancies which have to be installed:
 ```bash
 cd ~/workspace/src/
-https://github.com/ctu-mrs/mrs_gazebo_extras_resources
+git clone https://github.com/ctu-mrs/mrs_gazebo_extras_resources
 ```
 
 We provide installation scripts that set everything up for you.
