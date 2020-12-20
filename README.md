@@ -5,6 +5,12 @@ Based on the work of [Multi-robot Systems Group](https://github.com/ctu-mrs).
 ## Installation
 Before you go any further, you have to install the mrs_uav_system such that you obtain the```mrs_workspace``` and ```workspace``` folders. Refer yourself to [Multi-robot Systems Group](https://github.com/ctu-mrs/mrs_uav_system#installation).
 
+The following packages are required dependancies which have to be installed:
+```bash
+cd ~/workspace/src/
+https://github.com/ctu-mrs/mrs_gazebo_extras_resources
+```
+
 We provide installation scripts that set everything up for you.
 Our automated installation will:
 * clone [droneswarm_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics) into your git folder
