@@ -9,6 +9,7 @@ The following packages are required dependancies which have to be installed:
 ```bash
 cd ~/workspace/src/
 git clone https://github.com/ctu-mrs/mrs_gazebo_extras_resources
+git clone https://github.com/ctu-mrs/trajectory_loader 
 ```
 
 We provide installation scripts that set everything up for you.
@@ -32,7 +33,9 @@ cd droneswarm_brubotics/script/
 ./install.sh
 cd ~/workspace/'> clone.sh && source clone.sh
 ```
+
 In order to be able run the Matlab scripts that generate plots based on custom ctu mrs and/or brubotics ROS messages, first run the corresponding section of the script ```~/workspace/src/droneswarm_brubotics/useful_files/matlab/custom_msgs.m``` and perform the resulting Matlab instructions. Matlab version 2020b is at least required with the ROS toolbox installed.
+
 
 ## ROS_packages
 
