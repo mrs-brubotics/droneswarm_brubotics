@@ -34,7 +34,7 @@ cd droneswarm_brubotics/script/
 cd ~/workspace/'> clone.sh && source clone.sh
 ```
 
-In order to be able run the Matlab scripts that generate plots based on custom ctu mrs and/or brubotics ROS messages, first run the corresponding section of the script ```~/workspace/src/droneswarm_brubotics/useful_files/matlab/custom_msgs.m``` and perform the resulting Matlab instructions. Matlab version 2020b is at least required with the ROS toolbox installed.
+In order to be able run the Matlab scripts that generate plots based on custom ctu mrs and/or brubotics ROS messages, first run the corresponding section of the script ```~/workspace/src/droneswarm_brubotics/useful_files/matlab/custom_msgs.m``` and perform the resulting Matlab instructions. Matlab version 2020b is at least required with the ROS toolbox installed. Don't forget to include the ```matlab_msg_gen_ros1``` folder into the matlab path. 
 
 
 ## ROS_packages
