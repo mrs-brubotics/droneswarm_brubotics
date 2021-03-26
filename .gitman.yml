@@ -36,3 +36,12 @@ sources:
           link: ros_packages/testing_brubotics
           scripts: 
                   - git submodule update --init --recursive
+        - name: planners_brubotics
+          type: git
+          repo: git@github.com:mrs-brubotics/planners_brubotics.git
+          sparse_paths:
+                  -
+          rev: master
+          link: ros_packages/planners_brubotics
+          scripts: 
+                  - git submodule update --init --recursive
