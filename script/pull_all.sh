@@ -24,5 +24,5 @@ cd ~/git/simulation
 git pull
 gitman install
 
-echo "$0: mrs files are restored, please use again overwrite_mrs_files.sh if you use it before."
-echo "$0: do not forget to catkin build mrs_workspace and workspace if changes have been made."
+echo "$0: ctu-mrs files in mrs_uav_managers are restored, please use again overwrite_mrs_files.sh if you use it before."
+echo "$0: do not forget to catkin build the mrs_workspace and the workspace."
