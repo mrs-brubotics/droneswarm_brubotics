@@ -11,7 +11,7 @@ echo "$0: building the mrs_workspace"
 cd ~/mrs_workspace
 catkin build
 
-echo "$0: linking droneswarm_brubotics to ~/workspace"
+echo "$0: linking = copying droneswarm_brubotics to ~/workspace/src"
 cd ~/workspace/src/
 ln -sf $MY_PATH/../../droneswarm_brubotics
 
@@ -20,5 +20,5 @@ cd droneswarm_brubotics/
 gitman install
 
 echo "$0: building the workspace"
-cd ../../
+cd ../../ #not strictly necessary
 catkin build
