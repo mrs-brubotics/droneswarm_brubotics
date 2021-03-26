@@ -4,7 +4,7 @@
 MY_PATH=`dirname "$0"`
 MY_PATH=`( cd "$MY_PATH" && pwd)`
 
-echo "$0: if you use overwrite_mrs_files.sh restore mrs files"
+echo "$0: since you might have used overwrite_mrs_files.sh before, let's restore the mrs files"
 ./restore_mrs_files.sh
 
 cd $MY_PATH/..
@@ -12,10 +12,10 @@ cd $MY_PATH/..
 git checkout master
 git pull
 
-echo "$0: pull code from ros_package"
+echo "$0: pulling code from ?ros_package?"
 gitman update
 
-echo "$0: pull code from mrs" #https://ctu-mrs.github.io/docs/introduction/how_to_update.html
+echo "$0: pull code from ctu-mrs" #https://ctu-mrs.github.io/docs/introduction/how_to_update.html
 cd ~/git/uav_core
 git pull
 gitman install 
