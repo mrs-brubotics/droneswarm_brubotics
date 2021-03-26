@@ -19,6 +19,6 @@ echo "$0: installing depedencies"
 cd droneswarm_brubotics/
 gitman install
 
-echo "$0: building workspace"
+echo "$0: building the workspace"
 cd ../../
 catkin build
