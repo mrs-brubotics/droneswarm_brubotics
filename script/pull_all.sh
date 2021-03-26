@@ -15,7 +15,7 @@ git pull
 echo "$0: pull code from ros_package"
 gitman update
 
-echo "$0: pull code from mrs"
+echo "$0: pull code from mrs" #https://ctu-mrs.github.io/docs/introduction/how_to_update.html
 cd ~/git/uav_core
 git pull
 gitman install 
@@ -24,5 +24,5 @@ cd ~/git/simulation
 git pull
 gitman install
 
-echo "$0: mrs files was restored, please use again overwrite_mrs_files.sh if you use it before pull."
-echo "$0: do not forget to build mrs_workspace and workspace if changes have happened."
+echo "$0: mrs files are restored, please use again overwrite_mrs_files.sh if you use it before."
+echo "$0: do not forget to catkin build mrs_workspace and workspace if changes have been made."
