@@ -15,7 +15,7 @@ git pull
 echo "$0: pulling code from ?ros_package?"
 gitman update
 
-echo "$0: pull code from ctu-mrs" #https://ctu-mrs.github.io/docs/introduction/how_to_update.html
+echo "$0: pulling code from ctu-mrs" #https://ctu-mrs.github.io/docs/introduction/how_to_update.html
 cd ~/git/uav_core
 git pull
 gitman install 
@@ -24,5 +24,5 @@ cd ~/git/simulation
 git pull
 gitman install
 
-echo "$0: ctu-mrs files in mrs_uav_managers are restored, please use again overwrite_mrs_files.sh if you use it before."
-echo "$0: do not forget to catkin build the mrs_workspace and the workspace."
+echo "$0: WARNING: ctu-mrs files in mrs_uav_managers are restored, please use again overwrite_mrs_files.sh if you use it before."
+echo "$0: WARNING: do not forget to catkin build the mrs_workspace and the workspace."
