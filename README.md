@@ -2,7 +2,7 @@
 All Brubotics packages are based on the work of [Multi-robot Systems (MRS) Group](https://github.com/ctu-mrs) of CTU Prague.
 
 ## Prerequisites
-Install Ubuntu 18 LTS desktop. Follow [these instructions](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview), boot from USB flash drive by creating a bootable memory stick as explain in [these tutorials](https://ubuntu.com/tutorials?topic=desktop). Download the Ubutnu iso image [here](https://releases.ubuntu.com/18.04.5/?_ga=2.174344866.1802272398.1615489706-53843902.1615489706).
+Install Ubuntu 18 LTS desktop on a powerful machine (most laptops give poor performance). Follow [these instructions](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview), boot from USB flash drive by creating a bootable memory stick as explain in [these tutorials](https://ubuntu.com/tutorials?topic=desktop). Download the Ubutnu iso image [here](https://releases.ubuntu.com/18.04.5/?_ga=2.174344866.1802272398.1615489706-53843902.1615489706).
 Note: installing Ubuntu 18 on the lab desktop is is not trivial due to some internal bug. Contact the responsible of this package in case Ubuntu 18.04 needs to be reinstalled on that machine.
 
 Configure the VUBnext internet settings on Ubuntu. In the Security tab select:
