@@ -6,13 +6,13 @@ Install Ubuntu 18 LTS desktop. Follow [these instructions](https://ubuntu.com/tu
 Note: installing Ubuntu 18 on the lab desktop is is not trivial due to some internal bug. Contact the responsible of this package in case Ubuntu 18.04 needs to be reinstalled on that machine.
 
 Configure the VUBnext internet settings on Ubuntu. In the Security tab select:
-*Security: WPA & WPA2 Enterprise
-*Authentication: Protected EAP (PEAP)
-*CA certificate: (None)
-*Check the "No CA certificate is required box.
-*PEAP version: Automatic
-*Inner authentication: MSCHAPv2
-*Fill in your VUB username and password.
+* Security: WPA & WPA2 Enterprise
+* Authentication: Protected EAP (PEAP)
+* CA certificate: (None)
+* Check the "No CA certificate is required box.
+* PEAP version: Automatic
+* Inner authentication: MSCHAPv2
+* Fill in your VUB username and password.
 
 ## Installation
 Before you go any further, you have to install the mrs_uav_system such that you obtain the```mrs_workspace``` and ```workspace``` folders. Refer yourself to [Multi-robot Systems Group](https://github.com/ctu-mrs/mrs_uav_system#installation).
