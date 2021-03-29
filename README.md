@@ -14,6 +14,13 @@ Configure the VUBnext internet settings on Ubuntu. In the Security tab select:
 * Inner authentication: MSCHAPv2
 * Fill in your VUB username and password.
 
+Regularly update ubuntu by:
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+```
+If there are packages not updated, first resolve this issue.
+
 ## Installation
 Before you go any further, you have to install the mrs_uav_system such that you obtain the```mrs_workspace``` and ```workspace``` folders. Refer yourself to [Multi-robot Systems Group](https://github.com/ctu-mrs/mrs_uav_system#installation).
 
