@@ -22,9 +22,14 @@ sudo apt-get upgrade
 If there are packages not updated, first resolve this issue.
 
 ## Installation
-Before you go any further, you have to install the mrs_uav_system such that you obtain the```mrs_workspace``` and ```workspace``` folders. Refer yourself to [Multi-robot Systems Group](https://github.com/ctu-mrs/mrs_uav_system#installation).
+Before you go any further, you have to install and build the mrs_uav_system such that you obtain the ```git```, ```mrs_workspace``` and ```workspace``` folders. Refer yourself to [Multi-robot Systems Group](https://github.com/ctu-mrs/mrs_uav_system#installation). No need to install ctu's linux environment yet.
+If not all packages are built correctly, try the multiple times ```catkin build``` in the mrs_workspace folder or the full installation in a new terminal.
+If too much RAM memory is required during the building process your screen will freeze, try ```catkin build -j2``` which ensures not more than two processes are building in parallel. Repeat ```catkin build``` until there are no errors and no warnings any more.
+This installation process gives a folders git, mrs_worksapce, worksapce and automatically updates your ```./bashrc``` file that is loaded when you open a new terminal. You can find the ```./bashrc``` in the Home directory by clicking on the three bars and checking the "Show Hidden Files" box.
+To test if the installation was successful, launch the shell script ```~/mrs_workspace/src/simulation/example_tmux_scripts/one_drone_gps ./start.sh```. The gazebo simulator should open and a drone should be taking off.
+Avoid changing any code in any of ctu's packages, unless there is no other way to implement your functionality. If your application requires custum setting in ctu's packages, report clearly where these are required since these will need to be done manually each time.
 
-The following packages are required dependancies which have to be installed:
+The following packages are required dependancies of droneswarm_brubotics which have to be installed to obtain full functionality:
 ```bash
 cd ~/workspace/src/
 git clone https://github.com/ctu-mrs/mrs_gazebo_extras_resources
