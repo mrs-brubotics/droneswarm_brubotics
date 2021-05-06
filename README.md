@@ -35,6 +35,7 @@ The following packages are required dependancies of droneswarm_brubotics which h
 cd ~/workspace/src/
 git clone https://github.com/ctu-mrs/mrs_gazebo_extras_resources
 git clone https://github.com/ctu-mrs/trajectory_loader 
+git clone https://github.com/ctu-mrs/mrs_serial
 ```
 
 We provide installation scripts that set everything up for you.
