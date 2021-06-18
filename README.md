@@ -36,7 +36,6 @@ cd ~/workspace/src/
 git clone https://github.com/ctu-mrs/mrs_gazebo_extras_resources
 git clone https://github.com/ctu-mrs/trajectory_loader 
 git clone https://github.com/ctu-mrs/mrs_serial
-git clone https://github.com/ctu-mrs/mrs_gazebo_extras_resources
 ```
 
 We provide installation scripts that set everything up for you.
