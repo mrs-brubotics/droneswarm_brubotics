@@ -36,10 +36,11 @@ cd ~/workspace/src/
 git clone https://github.com/ctu-mrs/mrs_gazebo_extras_resources
 git clone https://github.com/ctu-mrs/trajectory_loader 
 git clone https://github.com/ctu-mrs/mrs_serial
+git clone https://github.com/ctu-mrs/nimbro_network.git
 ```
+For the nimbro_network to work follow the steps listed in the [README](https://github.com/ctu-mrs/nimbro_network).
 
-We provide installation scripts that set everything up for you.
-Our automated installation will:
+We provide installation scripts that set everything up for you. Our automated installation will:
 * clone [droneswarm_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics) into your git folder
 * source our ```shell_additions.sh``` script
 * link it to your```workspace``` folder
