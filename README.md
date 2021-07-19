@@ -14,14 +14,22 @@ Configure the VUBnext internet settings on Ubuntu. In the Security tab select:
 * Inner authentication: MSCHAPv2
 * Fill in your VUB username and password.
 
-Regularly update ubuntu by:
+Regularly update Ubuntu by:
 ```bash
 sudo apt-get update
 sudo apt-get upgrade
 ```
-If there are packages not updated, first resolve this issue.
+If there are packages which are failed to be updated, first resolve this issue.
 
-Install and build the mrs_uav_system. Refer yourself to ctu mrs's [mrs_uav_system code](https://github.com/ctu-mrs/mrs_uav_system#installation) and [tutorial](https://ctu-mrs.github.io/). No need to install ctu's linux environment yet.
+Install and build the mrs_uav_system:
+Refer yourself to ctu mrs's [mrs_uav_system code](https://github.com/ctu-mrs/mrs_uav_system#installation) and [tutorial](https://ctu-mrs.github.io/). No need to install ctu's linux environment yet. Before isntallation, check that the build status is passing (green). If the build status is failing (red), you can clone proceed by replacing the checkout commit 'master' in the default install script
+```bash
+git checkout master
+```
+by the latest stable commit
+```bash
+git checkout replace_this_by_latest_stable_commit
+```
 If not all packages are built correctly, try the multiple times ```catkin build``` in the mrs_workspace folder or the full installation in a new terminal.
 If too much RAM memory is required during the building process your screen will freeze, try ```catkin build -j2``` which ensures not more than two processes are building in parallel. Repeat ```catkin build``` until there are no errors and no warnings any more.
 This installation process gives the ```git```, ```mrs_workspace``` and ```workspace``` folders and automatically updates your ```./bashrc``` file that is loaded when you open a new terminal. You can find the ```./bashrc``` in the Home directory by clicking on the three bars and checking the "Show Hidden Files" box.
