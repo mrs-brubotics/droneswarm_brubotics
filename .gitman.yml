@@ -18,15 +18,6 @@ sources:
           link: ros_packages/trackers_brubotics
           scripts:
                   - git submodule update --init --recursive
-        - name: matlab_graphs
-          type: git
-          repo: git@github.com:mrs-brubotics/MatlabGraphs.git
-          sparse_paths:
-                  -
-          rev: master
-          link: useful_files/matlab_graphs
-          scripts:
-                  - git submodule update --init --recursive
         - name: testing_brubotics
           type: git
           repo: git@github.com:mrs-brubotics/testing_brubotics.git
@@ -45,15 +36,6 @@ sources:
           link: ros_packages/planners_brubotics
           scripts: 
                   - git submodule update --init --recursive
-        - name: documentation_brubotics
-          type: git
-          repo: git@github.com:mrs-brubotics/documentation_brubotics.git
-          sparse_paths:
-                  -
-          rev: master
-          link: ros_packages/documentation_brubotics
-          scripts: 
-                  - git submodule update --init --recursive
         - name: visualization_brubotics
           type: git
           repo: git@github.com:mrs-brubotics/visualization_brubotics.git
@@ -61,5 +43,23 @@ sources:
                   -
           rev: master
           link: ros_packages/visualization_brubotics
+          scripts: 
+                  - git submodule update --init --recursive
+        - name: matlab_graphs
+          type: git
+          repo: git@github.com:mrs-brubotics/MatlabGraphs.git
+          sparse_paths:
+                  -
+          rev: master
+          link: useful_files/matlab_graphs
+          scripts:
+                  - git submodule update --init --recursive
+        - name: documentation_brubotics
+          type: git
+          repo: git@github.com:mrs-brubotics/documentation_brubotics.git
+          sparse_paths:
+                  -
+          rev: master
+          link: ros_packages/documentation_brubotics
           scripts: 
                   - git submodule update --init --recursive
