@@ -61,7 +61,7 @@ sources:
           repo: git@github.com:mrs-brubotics/documentation_brubotics.git
           sparse_paths:
                   -
-          rev: master
+          rev: main
           link: ros_packages/documentation_brubotics
           scripts: 
                   - git submodule update --init --recursive
