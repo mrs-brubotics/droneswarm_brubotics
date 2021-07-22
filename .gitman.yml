@@ -37,15 +37,15 @@ sources:
           link: ros_packages/planners_brubotics
           scripts: 
                   - git submodule update --init --recursive
-#        - name: visualization_brubotics
-#          type: git
-#          repo: git@github.com:mrs-brubotics/visualization_brubotics.git
-#          sparse_paths:
-#                  -
-#          rev: master
-#          link: ros_packages/visualization_brubotics
-#          scripts: 
-#                  - git submodule update --init --recursive
+        - name: visualization_brubotics
+          type: git
+          repo: git@github.com:mrs-brubotics/visualization_brubotics.git
+          sparse_paths:
+                  -
+          rev: main
+          link: ros_packages/visualization_brubotics
+          scripts: 
+                  - git submodule update --init --recursive
 # Non-ROS packages:
         - name: matlab_graphs
           type: git
