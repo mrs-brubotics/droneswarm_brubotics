@@ -76,6 +76,7 @@ First, you need to setup your ssh keys correctly by following [these steps](http
 
 In order to be able run the Matlab scripts that generate plots based on custom ctu mrs and/or brubotics ROS messages, first run the corresponding section of the script ```~/workspace/src/droneswarm_brubotics/useful_files/matlab/custom_msgs.m``` and perform the resulting Matlab instructions. Matlab version 2020b is at least required with the ROS toolbox installed. Don't forget to include the ```matlab_msg_gen_ros1``` folder into the matlab path. 
 
+Build the documentation_brubotics package as described [here](https://github.com/mrs-brubotics/documentation_brubotics).
 
 ## ROS_packages
 
@@ -112,3 +113,9 @@ Create a symbolic link to a directory as is explained [here](https://linuxize.co
 ln -s symLinkFolderName/ relativepathto/.gitman/repo_name_used_in_gitman.yaml
 ```
 Put ROS packages in ros_packages and other repositories elsewhere in droneswarm_brubotics. You should push the changes in droneswarm_brubotics such that the symbolic link (e.g. [example for documentation_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/documentation_brubotics)) is git version controlled.
+
+## Reinstalling droneswarm_brubotics
+We advice to regularly reinstall droneswarm_brubotics to check if everything still installs correctly.
+Before reinstalling, delete the the droneswarm_brubotics folder inside the git folder and inside the workspace folder.
+This procedure is the same for each installed package. 
+If there are installation or building problems which you cannot solve, please open an issue immediately.
