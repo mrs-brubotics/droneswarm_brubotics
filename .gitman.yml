@@ -62,6 +62,6 @@ sources:
           sparse_paths:
                   -
           rev: main
-          link: ros_packages/documentation_brubotics
+          link: documentation_brubotics
           scripts: 
                   - git submodule update --init --recursive
