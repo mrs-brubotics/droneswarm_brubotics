@@ -56,7 +56,7 @@ We provide installation scripts that set everything up for you. Our automated in
 * build the```workspace```
 
 Install manually the following dependencies:
-* [documentation_brubotics](https://github.com/mrs-brubotics/documentation_brubotics/blob/main/README.md)
+* [documentation_brubotics](https://github.com/mrs-brubotics/documentation_brubotics/blob/main/README.md) for python3 and sphinx-rtd-theme
 
 To start the automatic installation, please paste the following code into your terminal and press **enter**
 ```bash
