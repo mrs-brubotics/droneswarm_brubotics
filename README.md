@@ -106,6 +106,7 @@ Contains __shell_additions.sh__ : which contains the definition of waitBeforeGoT
 * __mrs_files__ : Contains modified files that we have to implement into mrs_workspace. In the control_manager.cpp file, disable_safety features are implemented.
 
 ## Adding a new repository under the default installed repositories
+Update the [gitman.yaml](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.gitman.yml).
 Create a symbolic link to a directory as is explained [here](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/). First create a directory with the same name as the repo name you used in the gitman.yaml. The symbolic link is created by:
 ```bash
 ln -s symLinkFolderName/ relativepathto/.gitman/repo_name_used_in_gitman.yaml
