@@ -22,11 +22,13 @@ by the latest stable commit
 git checkout replace_this_by_latest_stable_commit
 ```
 IMPORTANT NOTE!: currently, the brubotics code works for the mrs_uav_system of commit 7ed0fd84e4f6d37468c429038ab384c8433cf597 (their current master branch at the time of writing). BUT the following has to be done manually after installation. DO NOT FORGET TO DO THIS WHEN REINSTALLING!
-  * ```bash cd ~/mrs_workspace/src/uav_core/ros_packages/mrs_uav_odometry
+  * ```bash 
+       cd ~/mrs_workspace/src/uav_core/ros_packages/mrs_uav_odometry
        git pull origin master
        git checkout d65c7d4c6c7b80f50d6d467f55d05f5197847686
        ```
-  * ```bash cd ~/mrs_workspace/src/uav_core/ros_packages/mrs_lib
+  * ```bash 
+       cd ~/mrs_workspace/src/uav_core/ros_packages/mrs_lib
        git pull origin master
        git checkout d6c17dcae2a163ff0bdc566f6d0eab1702828bb3 
        ```
