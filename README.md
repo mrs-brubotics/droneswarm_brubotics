@@ -21,6 +21,15 @@ by the latest stable commit
 ```bash
 git checkout replace_this_by_latest_stable_commit
 ```
+IMPORTANT NOTE!: currently, the brubotics code works for the mrs_uav_system of commit 7ed0fd84e4f6d37468c429038ab384c8433cf597 (their current master branch at the time of writing). BUT the following has to be done manually after installation. DO NOT FORGET TO DO THIS WHEN REINSTALLING!
+  * cd ~/mrs_workspace/src/uav_core/ros_packages/mrs_uav_odometry
+  * git pull origin master
+  * git checkout d65c7d4c6c7b80f50d6d467f55d05f5197847686
+  * cd ~/mrs_workspace/src/uav_core/ros_packages/mrs_lib
+  * git pull origin master
+  * git checkout d6c17dcae2a163ff0bdc566f6d0eab1702828bb3
+  * catkin build
+
 If not all packages are built correctly, try the multiple times ```catkin build``` in the mrs_workspace folder or the full installation in a new terminal.
 If too much RAM memory is required during the building process your screen will freeze, try ```catkin build -j2``` which ensures not more than two processes are building in parallel. Repeat ```catkin build``` until there are no errors and no warnings any more.
 This installation process gives the ```git```, ```mrs_workspace``` and ```workspace``` folders and automatically updates your ```./bashrc``` file that is loaded when you open a new terminal. You can find the ```./bashrc``` in the Home directory by clicking on the three bars and checking the "Show Hidden Files" box.
