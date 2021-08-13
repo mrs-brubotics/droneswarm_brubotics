@@ -11,8 +11,8 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 If there are packages which are failed to be updated, first resolve this issue.
-
-## Installation mrs_uav_system
+## Installation dependancies for droneswarm_brubotics 
+### Installation mrs_uav_system
 Install and build the mrs_uav_system:
 Refer yourself to ctu mrs's [mrs_uav_system code](https://github.com/ctu-mrs/mrs_uav_system#installation) and [tutorial](https://ctu-mrs.github.io/). No need to install ctu's linux environment yet. Before isntallation, check that the build status is passing (green). If the build status is failing (red), you can clone proceed by replacing the checkout commit 'master' in the default install script
 ```bash
@@ -45,7 +45,7 @@ To test if the installation was successful, launch the shell script ```~/mrs_wor
 Avoid changing any code in any of ctu's packages, unless there is no other way to implement your functionality. If your application requires custum setting in ctu's packages, report clearly where these are required since these will need to be done manually each time.
 Regularly reinstall ctu's mrs_uav_system as it is evolving continuously and check the [backwards compatiblities and updates](https://github.com/ctu-mrs/mrs_uav_system#installation).
 
-## Installation droneswarm_brubotics
+### Installation of some non standard ctu packages
 The following packages are required dependancies of droneswarm_brubotics which have to be installed to obtain full functionality:
 ```bash
 cd ~/workspace/src/
@@ -56,6 +56,7 @@ git clone https://github.com/ctu-mrs/nimbro_network.git
 ```
 * For the nimbro_network to work follow the steps listed in the [README](https://github.com/ctu-mrs/nimbro_network).
 
+## Installation of droneswarm_brubotics
 We provide installation scripts that set everything up for you. Our automated installation will:
 * clone [droneswarm_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics) into your git folder
 * source our ```shell_additions.sh``` script
