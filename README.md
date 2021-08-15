@@ -12,6 +12,8 @@ sudo apt-get upgrade
 ```
 If there are packages which are failed to be updated, first resolve this issue.
 ## Installation dependancies for droneswarm_brubotics 
+If you already installed ctu or brubotics code and would like to reinstall, please follow [these steps](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#reinstalling-droneswarm_brubotics).
+
 ### Installation mrs_uav_system
 Install and build the mrs_uav_system:
 Refer yourself to ctu mrs's [mrs_uav_system code](https://github.com/ctu-mrs/mrs_uav_system#installation) and [tutorial](https://ctu-mrs.github.io/). No need to install ctu's linux environment yet. Before isntallation, check that the build status is passing (green). If the build status is failing (red), you can clone proceed by replacing the checkout commit 'master' in the default install script
