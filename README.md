@@ -141,8 +141,9 @@ ln -s symLinkFolderName/ relativepathto/.gitman/repo_name_used_in_gitman.yaml
 ```
 Put ROS packages in ros_packages and other repositories elsewhere in droneswarm_brubotics. You should push the changes in droneswarm_brubotics such that the symbolic link (e.g. [example for documentation_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/documentation_brubotics)) is git version controlled.
 
-## Reinstalling droneswarm_brubotics
-We advice to regularly reinstall droneswarm_brubotics to check if everything still installs correctly.
-Before reinstalling, delete the the droneswarm_brubotics folder inside the git folder and inside the workspace folder.
+## Reinstalling mrs_uav_system and droneswarm_brubotics
+We advice to regularly reinstall the mrs_uav_system and droneswarm_brubotics to check if everything still installs correctly.
+Before reinstalling, delete the mrs_uav_system and/or droneswarm_brubotics folder inside the git folder and inside the workspace folder.
+If you would like to reinstall everything just delete the git, the mrs_workspace and the worksapce folder.
 This procedure is the same for each installed package. 
 If there are installation or building problems which you cannot solve, please open an issue immediately.
