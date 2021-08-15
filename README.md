@@ -90,7 +90,7 @@ cd ~/workspace/'> clone.sh && source clone.sh
 ```
 * Installing the first time on a new machine will throw the error: ```git@github.com: Permission denied (publickey)```. First, you need to setup your ssh keys correctly by following [these steps](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). Also since August 2021 developers are required to use [personel access tokens](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/). Follow [these steps](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) to generate these tokes.
 
-## Matlab Plots
+### Matlab Plots
 * For data processing and plotting Matlab and Simulink version 2021a is at least required with the following toolboxes installed:
   * ROS toolbox
   * TODO add all toolboxes 
@@ -108,11 +108,11 @@ cd ~/workspace/'> clone.sh && source clone.sh
   ```bash
   cmake --version
   ```
-## Documentation
+### Documentation
 * All packages have README.md files which expliain their use.
 * A general documentation package is also available. We advise all new users to read TODO chapter on info for internal collaborators. Build the documentation_brubotics package as described [here](https://github.com/mrs-brubotics/documentation_brubotics).
 
-## ROS_packages
+### ROS_packages
 
 * __controllers_brubotics__ : [link to the github](https://github.com/mrs-brubotics/controllers_brubotics)
 
@@ -120,7 +120,7 @@ cd ~/workspace/'> clone.sh && source clone.sh
 
 * __testing_brubotics__ : [link to the github](https://github.com/mrs-brubotics/testing_brubotics)
 
-## Script folder
+### Script folder
 
 * __install.sh__ : will link the packages to ~/workspace/src, install ROS packages, and automatically build the packages.
 
@@ -130,17 +130,17 @@ cd ~/workspace/'> clone.sh && source clone.sh
 
 * __restore_mrs_files__ : will restore mrs_workspace files from the previous overwriting.
 
-## Shell_addition folder
+### Shell_addition folder
 
 Contains __shell_additions.sh__ : which contains the definition of waitBeforeGoTo, a bash function to detect when GoTo service can be used.
 
-## Useful_files folder
+### Useful_files folder
 
 * __matlab_graph__ : [link to the github](https://github.com/mrs-brubotics/MatlabGraphs)
 
 * __mrs_files__ : Contains modified files that we have to implement into mrs_workspace. In the control_manager.cpp file, disable_safety features are implemented.
 
-## Adding a new repository under the default installed repositories
+### Adding a new repository under the default installed repositories
 Update the [gitman.yaml](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.gitman.yml).
 Create a symbolic link to a directory as is explained [here](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/). First create a directory with the same name as the repo name you used in the gitman.yaml. The symbolic link is created by:
 ```bash
