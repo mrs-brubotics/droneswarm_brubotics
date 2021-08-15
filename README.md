@@ -38,7 +38,12 @@ IMPORTANT NOTE!: currently, the brubotics code works for the mrs_uav_system of c
   * ```bash
        catkin build 
        ```
-  * Test one_drone_gps_baro. It works if the uavs do not keep increasing altitude. More info see this issue: https://github.com/ctu-mrs/mrs_uav_system/issues/95
+  * Test one_drone_gps_baro. 
+    ```bash
+    cd ~/mrs_workspace/src/simulation/example_tmux_scripts/one_drone_gps_baro/
+    ./start.sh
+    ```
+    It works if the uavs do not keep increasing altitude. More info see this issue: https://github.com/ctu-mrs/mrs_uav_system/issues/95
 
 If not all packages are built correctly, try the multiple times ```catkin build``` in the mrs_workspace folder or the full installation in a new terminal.
 If too much RAM memory is required during the building process your screen will freeze, try ```catkin build -j2``` which ensures not more than two processes are building in parallel. Repeat ```catkin build``` until there are no errors and no warnings any more.
