@@ -83,10 +83,11 @@ cd ~/workspace/'> clone.sh && source clone.sh
 ```
 * Installing the first time on a new machine will throw the error: ```git@github.com: Permission denied (publickey)```. First, you need to setup your ssh keys correctly by following [these steps](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). Also since August 2021 developers are required to use [personel access tokens](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/). Follow [these steps](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) to generate these tokes.
 
-* In order to be able run the Matlab scripts that generate plots based on custom ctu mrs and/or brubotics ROS messages, first run the corresponding section of the script ```~/workspace/src/droneswarm_brubotics/useful_files/matlab/custom_msgs.m``` and perform the resulting Matlab instructions. Matlab and Simulink version 2021a is at least required with the following toolboxes installed:
+* For data processing and plotting Matlab and Simulink version 2021a is at least required with the following toolboxes installed:
   * ROS toolbox
   * TODO add all toolboxes 
-*    Don't forget to include the ```matlab_msg_gen_ros1``` folder into the matlab path. 
+ 
+  In order to be able run the Matlab scripts that generate plots based on custom ctu mrs and/or brubotics ROS messages, first run the corresponding section of the script ```~/workspace/src/droneswarm_brubotics/useful_files/matlab/custom_msgs.m``` and perform the resulting Matlab instructions. Don't forget to include the ```matlab_msg_gen_ros1``` folder into the matlab path. 
 
 * Build the documentation_brubotics package as described [here](https://github.com/mrs-brubotics/documentation_brubotics).
 
