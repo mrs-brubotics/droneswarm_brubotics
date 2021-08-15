@@ -88,6 +88,10 @@ cd ~/workspace/'> clone.sh && source clone.sh
   * TODO add all toolboxes 
  
   In order to be able run the Matlab scripts that generate plots based on custom ctu mrs and/or brubotics ROS messages, first run the corresponding section of the script ```~/workspace/src/droneswarm_brubotics/useful_files/matlab/custom_msgs.m``` and perform the resulting Matlab instructions. Don't forget to include the ```matlab_msg_gen_ros1``` folder into the matlab path. Do this each time you reinstall droneswarm_brubotics.
+  Note: if matlab throws an error that a newer version of cmake is required to generate the ROS msgs and srvs, you can install any version of cmake by following the build from source steps in [Installing the Latest CMake on Ubuntu Linux](https://graspingtech.com/upgrade-cmake/). The installation procedure can take a few minutes. You can check the version of cmake by
+  ```bash
+  cmake --version
+  ```
 
 * Build the documentation_brubotics package as described [here](https://github.com/mrs-brubotics/documentation_brubotics).
 
