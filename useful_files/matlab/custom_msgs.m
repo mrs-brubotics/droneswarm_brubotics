@@ -52,7 +52,13 @@ for k = 1:2 % msg and srv
     for i=1:num_fields_dir_here
         str_local_folder = strcat(dir_here(i).folder,'/',dir_here(i).name);
         %disp(str_local_folder);
-        cd(str_local_folder)
+        try
+            cd(str_local_folder)
+        catch ME
+            warning(ME.message); % a file is not a folder so cannot cd
+            disp('a file is not a folder so cannot cd')
+            continue % go to next iteration in for loop
+        end
         % we assume no deeper than 1 subfolder are .msg or .srv files
         dir_local_folder = dir(strcat('*.',str_msg_or_srv));
         num_fields_dir_local_folder = size(dir_local_folder,1);
