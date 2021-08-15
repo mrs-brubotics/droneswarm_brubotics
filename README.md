@@ -55,7 +55,7 @@ git clone https://github.com/ctu-mrs/mrs_serial
 git clone https://github.com/ctu-mrs/nimbro_network.git
 catkin build
 ```
-* For the nimbro_network to work follow the Automatic Installation steps listed in the [README](https://github.com/ctu-mrs/nimbro_network) and when requested say yes 'y' to permanantly enable multicast.
+* Only for onboard drone computers: for the nimbro_network to work follow the Automatic Installation steps listed in the [README](https://github.com/ctu-mrs/nimbro_network) and when requested say yes 'y' to permanantly enable multicast. TODO REFER TO DETAILED STEPS OF NIMBRO
 
 ## Installation of droneswarm_brubotics
 We provide installation scripts that set everything up for you. Our automated installation will:
