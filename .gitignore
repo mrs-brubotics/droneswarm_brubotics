@@ -1,3 +1,10 @@
+*.fig
+*.mat
+*.bag
+*.eps
+*.svg
+
+# DO NOT CHANGE
 # ignore temp files
 *~
 
