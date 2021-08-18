@@ -53,6 +53,10 @@ To test if the installation was successful, launch the shell script ```~/mrs_wor
 Avoid changing any code in any of ctu's packages, unless there is no other way to implement your functionality. If your application requires custum setting in ctu's packages, report clearly where these are required since these will need to be done manually each time.
 Regularly reinstall ctu's mrs_uav_system as it is evolving continuously and check the [backwards compatiblities and updates](https://github.com/ctu-mrs/mrs_uav_system#installation).
 
+### Some known issues
+* If after installtion of the mrs_uav_system you cannot updated your machine anymore as described above, there might be this known and solved issue wiuth the google-guest-agent service. Follow the steps here (https://github.com/ctu-mrs/mrs_uav_system/discussions/76) and use htop to kill the google-guest processes.
+* Regularly check ctu's "Backwards compatibility and updates" section (https://github.com/ctu-mrs/mrs_uav_system#backwards-compatibility-and-updates) and see if it affects your code. 
+
 ### Installation of some non standard ctu packages
 The following packages are required dependancies of droneswarm_brubotics which have to be installed to obtain full functionality:
 ```bash
