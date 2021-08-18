@@ -54,7 +54,7 @@ Avoid changing any code in any of ctu's packages, unless there is no other way t
 Regularly reinstall ctu's mrs_uav_system as it is evolving continuously and check the [backwards compatiblities and updates](https://github.com/ctu-mrs/mrs_uav_system#installation).
 
 ### Some known issues
-* If after installtion of the mrs_uav_system you cannot updated your machine anymore as described above, there might be this known and solved issue wiuth the google-guest-agent service. Follow the steps here (https://github.com/ctu-mrs/mrs_uav_system/discussions/76) and use htop to kill the google-guest processes. After these steps make sure you can update yuor system. If you cannot, go to Ubutnu's Software Updater and follow the steps.
+* If after installtion of the mrs_uav_system you cannot updated your machine anymore as described above and when shutting down, the ubutnu loader displays forever, there might be this known and solved issue wiuth the google-guest-agent service. Follow the steps here (https://github.com/ctu-mrs/mrs_uav_system/discussions/76) and use htop to kill the google-guest processes. After these steps make sure you can update yuor system. If you cannot, go to Ubutnu's Software Updater and follow the steps.
 * Regularly check ctu's "Backwards compatibility and updates" section (https://github.com/ctu-mrs/mrs_uav_system#backwards-compatibility-and-updates) and see if it affects your code. 
 
 ### Installation of some non standard ctu packages
