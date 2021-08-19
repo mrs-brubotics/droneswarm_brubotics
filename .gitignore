@@ -1,6 +1,6 @@
 *.fig
 *.mat
-#*.bag
+*.bag
 *.eps
 *.svg
 
