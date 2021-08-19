@@ -93,7 +93,9 @@ cd droneswarm_brubotics/script/
 ./install.sh
 cd ~/workspace/'> clone.sh && source clone.sh
 ```
-* Installing the first time on a new machine will throw the error: ```git@github.com: Permission denied (publickey)```. First, you need to setup your ssh keys correctly by following [these steps](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). Also since August 2021 developers are required to use [personel access tokens](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/). Follow [these steps](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) to generate these tokes.
+* Installing the first time on a new machine will throw the error: ```git@github.com: Permission denied (publickey)```. 
+  * First, you need to setup your ssh keys correctly by following [these steps](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). This need to be done for each machine you use. The current ssh keys can be found in the home/.shh folder. Make sure you set the Home folder to "Show Hidden Files". 
+  * Also since August 2021 developers are required to use [personel access tokens](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/). Follow [these steps](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) to generate these tokes.
 
 ### Matlab Plots
 * For data processing and plotting Matlab and Simulink version 2021a is at least required with the following toolboxes installed:
