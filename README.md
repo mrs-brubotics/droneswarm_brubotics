@@ -8,6 +8,8 @@ Note: installing Ubuntu 18 on the lab desktop is is not trivial due to some inte
 Regularly update Ubuntu by:
 ```bash
 sudo apt-get update
+```
+```bash
 sudo apt-get upgrade
 ```
 If there are packages which are failed to be updated, first resolve this issue.
