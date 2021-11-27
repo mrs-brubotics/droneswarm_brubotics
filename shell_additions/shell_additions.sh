@@ -48,6 +48,23 @@ bagbryan () {
   command rosbag record -O ./results/simulation/$string1/bag-$TEST_NAME-$UAV_NAME-$RUN_TYPE-$UAV_TYPE-$ODOMETRY_TYPE-$TRACKER_NAME-$CONTROLLER_NAME-`date "+%Y-%m-%d_%Hh-%Mm-%Ss"`.bag /$UAV_NAME/odometry/odom_main /$UAV_NAME/odometry/uav_state /$UAV_NAME/control_manager/cmd_odom /$UAV_NAME/control_manager/position_cmd /$UAV_NAME/control_manager/$TRACKER_NAME/goal_pose /$UAV_NAME/control_manager/$TRACKER_NAME/DistanceBetweenUavs /$UAV_NAME/control_manager/$TRACKER_NAME/TrajectoryTracking /$UAV_NAME/control_manager/$TRACKER_NAME/ComputationalTime
 }
 
+rosbagAllUAVs () {
+  eval string1="$1"
+  bagTopics="" # empty
+  # currentyl hardcoded for 30uavs, assumes ids are 1 2 3 ...30
+  for i in {1..30}
+  do
+    UAV_NAME="uav""$i";
+    # echo "${UAV_NAME}"
+    bagTopicsToAdd="/"$UAV_NAME"/odometry/odom_main /"$UAV_NAME"/odometry/uav_state /"$UAV_NAME"/control_manager/cmd_odom /"$UAV_NAME"/control_manager/position_cmd /"$UAV_NAME"/control_manager/"$TRACKER_NAME"/goal_pose /"$UAV_NAME"/control_manager/"$TRACKER_NAME"/DistanceBetweenUavs /"$UAV_NAME"/control_manager/"$TRACKER_NAME"/TrajectoryTracking /"$UAV_NAME"/control_manager/"$TRACKER_NAME"/ComputationalTime"
+    # echo "${bagTopicsToAdd}"
+    bagTopics=${bagTopics}" "${bagTopicsToAdd}
+    # echo "${bagTopics}"
+  done
+  # echo "${bagTopics}"
+  rosbag record -O ./results/simulation/$string1/bag-$TEST_NAME-"allUAVs"-$RUN_TYPE-$UAV_TYPE-$ODOMETRY_TYPE-$TRACKER_NAME-$CONTROLLER_NAME-`date "+%Y-%m-%d_%Hh-%Mm-%Ss"`.bag $bagTopics  #bagTopics
+}
+
 takeoffbryan () {
   command rosservice call /$UAV_NAME/mavros/cmd/arming 1; sleep 2; rosservice call /$UAV_NAME/mavros/set_mode 0 offboard
 }
@@ -59,7 +76,10 @@ controlbryan () {
 }
 
 load_and_goto_trajectory_start () {
-  command history -s $(echo waitForControl\; roslaunch testing_brubotics trajectory_bryan.launch file:=tmux_scripts/bryan/benchmarks_many_uavs_D-ERG/trajectories/30_uavs_2Dsteps_$UAV_NAME.txt\; sleep 2\; rosservice call /$UAV_NAME/control_manager/goto_trajectory_start)
+  # command history -s $(echo waitForControl\; roslaunch testing_brubotics trajectory_bryan.launch file:=tmux_scripts/bryan/benchmarks_many_uavs_D-ERG/trajectories/30_uavs_2Dsteps_$UAV_NAME.txt\; sleep 2\; rosservice call /$UAV_NAME/control_manager/goto_trajectory_start)
+  command roslaunch testing_brubotics trajectory_bryan.launch file:=tmux_scripts/bryan/benchmarks_many_uavs_D-ERG/trajectories/30_uavs_2Dsteps_$UAV_NAME.txt; 
+  command sleep 2; 
+  command rosservice call /$UAV_NAME/control_manager/goto_trajectory_start
 }
 # #}
 # #}
