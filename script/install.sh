@@ -19,7 +19,7 @@ if [ "$num" -lt "1" ]; then
   echo "${TEMP1}"
   TEMP2=`( cd "/shell_additions/shell_brubotics_additions" && pwd )`
   echo "${TEMP2}"
-  TEMP=TEMP1TEMP2
+  TEMP=${TEMP1}${TEMP2}
   echo "${TEMP}"
   
   #echo "${TEMP}"
