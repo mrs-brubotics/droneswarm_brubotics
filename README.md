@@ -92,7 +92,7 @@ cd $GIT_PATH
 git clone https://github.com/mrs-brubotics/droneswarm_brubotics.git
 cd droneswarm_brubotics/script/
 ./install.sh -g $GIT_PATH
-cd ~/workspace/'> clone.sh && source clone.sh
+'> clone.sh && source clone.sh
 ```
 * Manually follow the output generated during the installation process. There are no issues if during the 'Installing dependencies...' all repos are cloned and checked out sucessfully  (e.g. no uncommitted changes). You should now see these cloned repos in the git folder and in the workspace folder.
 * Installing the first time on a new machine will throw the error: ```git@github.com: Permission denied (publickey)```. 
