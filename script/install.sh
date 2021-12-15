@@ -12,18 +12,8 @@ num=`cat ~/.bashrc | grep "shell_brubotics_additions.sh" | wc -l`
 if [ "$num" -lt "1" ]; then
   #echo "${MY_PATH}"
   
-  #TEMP=`( cd "$MY_PATH/../shell_additions/shell_brubotics_additions" && pwd )`
-  pwd
-  #cd "$MY_PATH/.."
-  TEMP1=`( cd "$MY_PATH/.." && pwd )`
-  echo "${TEMP1}"
-  TEMP2=`( cd "/shell_additions/shell_brubotics_additions" && pwd )`
-  echo "${TEMP2}"
-  TEMP=${TEMP1}${TEMP2}
-  echo "${TEMP}"
-  
-  #echo "${TEMP}"
-  #pwd
+  TEMP=`( cd "$MY_PATH/../shell_additions" && pwd )`
+
   echo "Adding source to .bashrc"
   # set bashrc
   echo "
