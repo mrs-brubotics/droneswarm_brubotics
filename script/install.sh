@@ -14,9 +14,13 @@ if [ "$num" -lt "1" ]; then
   
   #TEMP=`( cd "$MY_PATH/../shell_additions/shell_brubotics_additions" && pwd )`
   pwd
-  cd "$MY_PATH/.."
-  pwd
-  TEMP=`( cd "/shell_additions/shell_brubotics_additions" && pwd )`
+  #cd "$MY_PATH/.."
+  TEMP1=`( cd "$MY_PATH/.." && pwd )`
+  echo "${TEMP1}"
+  TEMP2=`( cd "/shell_additions/shell_brubotics_additions" && pwd )`
+  echo "${TEMP2}"
+  TEMP=TEMP1TEMP2
+  echo "${TEMP}"
   
   #echo "${TEMP}"
   #pwd
