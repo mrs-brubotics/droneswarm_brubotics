@@ -5,12 +5,14 @@ MY_PATH=`dirname "$0"`
 MY_PATH=`( cd "$MY_PATH" && pwd)`
 
 echo "${MY_PATH}"
+pwd
 # | ------- add sourcing of shell brubotics additions to .bashrc ------- |
 num=`cat ~/.bashrc | grep "shell_brubotics_additions.sh" | wc -l`
 if [ "$num" -lt "1" ]; then
   echo "${MY_PATH}"
   TEMP=`( cd "$MY_PATH/../shell_additions/shell_brubotics_additions" && pwd )`
   echo "${TEMP}"
+  pwd
   echo "Adding source to .bashrc"
   # set bashrc
   echo "
