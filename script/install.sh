@@ -9,7 +9,7 @@ echo "${MY_PATH}"
 num=`cat ~/.bashrc | grep "shell_brubotics_additions.sh" | wc -l`
 if [ "$num" -lt "1" ]; then
   echo "${MY_PATH}"
-  TEMP=`( cd "$MY_PATH/../shell_brubotics_additions" && pwd )`
+  TEMP=`( cd "$MY_PATH/../shell_additions/shell_brubotics_additions" && pwd )`
   echo "${TEMP}"
   echo "Adding source to .bashrc"
   # set bashrc
