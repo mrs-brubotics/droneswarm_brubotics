@@ -4,7 +4,7 @@
 MY_PATH=`dirname "$0"`
 MY_PATH=`( cd "$MY_PATH" && pwd)`
 
-
+echo "${MY_PATH}"
 # | ------- add sourcing of shell brubotics additions to .bashrc ------- |
 num=`cat ~/.bashrc | grep "shell_brubotics_additions.sh" | wc -l`
 if [ "$num" -lt "1" ]; then
