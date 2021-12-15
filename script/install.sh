@@ -10,16 +10,23 @@ cd "$MY_PATH"
 # | ------- add sourcing of shell brubotics additions to .bashrc ------- |
 num=`cat ~/.bashrc | grep "shell_brubotics_additions.sh" | wc -l`
 if [ "$num" -lt "1" ]; then
-  #echo "${MY_PATH}"
-  
   TEMP=`( cd "$MY_PATH/../shell_additions" && pwd )`
-
   echo "Adding source to .bashrc"
   # set bashrc
   echo "
 # Brubotics shell configuration:
 source $TEMP/shell_brubotics_additions.sh" >> ~/.bashrc
 fi
+# | ------- add command ulimit -n 4096 to .bashrc ------- |
+num=`cat ~/.bashrc | grep "ulimit -n" | wc -l`
+if [ "$num" -lt "1" ]; then
+  echo "Adding source to .bashrc"
+  # set bashrc
+  echo "
+# ulimit shell configuration to increase process file size limit (required for benchmarks):
+command ulimit -n 4096" >> ~/.bashrc
+fi
+
 
 #echo "$0: updating all ctu-mrs and mrs-brubotics files"
 #./pull_all.sh  # we cannot checkout at ctu's master branches at all times (current bug in their altitude)
