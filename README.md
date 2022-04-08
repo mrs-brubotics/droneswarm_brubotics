@@ -113,6 +113,13 @@ cd droneswarm_brubotics/script/
   * First, you need to setup your ssh keys correctly by following [these steps](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). This need to be done for each machine you use. The current ssh keys can be found in the home/.shh folder. Make sure you set the Home folder to "Show Hidden Files". 
   * Also since August 2021 developers are required to use [personel access tokens](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/). Follow [these steps](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) to generate these tokes.
 
+### Manual changes required in mrs_uav_system
+In order to simulate with the UAV mass properties that better correspond to the hardware prototype of the f450 UAV, one must change:
+* Open ~/mrs_workspace/src/simulation/ros_packages/mrs_simulation/models/mrs_robots_description/urdf/f450.xacro and adjust the mass: <xacro:property name="mass" value="${2.40-0.005*4.0-0.015-0.00001}" /> <!-- [kg] 2.40--> 
+* Open ~/mrs_workspace/src/uav_core/ros_packages/mrs_uav_managers/config/simulation/f450/mass.yaml and adjust the mass: uav_mass: 2.40 #2.00 # [kg]
+* Catkin build the mrs_worspace
+
+
 ### Matlab Plots
 * For data processing and plotting Matlab and Simulink version 2021a is at least required with the following toolboxes installed:
   * ROS toolbox
