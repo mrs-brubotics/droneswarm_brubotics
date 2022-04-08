@@ -118,6 +118,7 @@ In order to simulate with the UAV mass properties that better correspond to the 
 * Open ```~/mrs_workspace/src/simulation/ros_packages/mrs_simulation/models/mrs_robots_description/urdf/f450.xacro``` and adjust the mass: ```<xacro:property name="mass" value="${2.40-0.005*4.0-0.015-0.00001}" /> <!-- [kg] 2.40--> ```
 * Open ```~/mrs_workspace/src/uav_core/ros_packages/mrs_uav_managers/config/simulation/f450/mass.yaml``` and adjust the mass: ```uav_mass: 2.40 #2.00 # [kg]```
 * Catkin build the mrs_worspace
+* Do not forget to to the above steps each time you reinstall the mrs_uav_system
 
 
 ### Matlab Plots
