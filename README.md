@@ -1,18 +1,19 @@
 # droneswarm_brubotics
-All Brubotics packages are based on the work of [Multi-robot Systems (MRS) Group](https://github.com/ctu-mrs) of CTU Prague.
+All brubotics packages are based on the work of [Multi-robot Systems (MRS) Group of the CTU in Prague](https://github.com/ctu-mrs).
 
 ## Prerequisites
-Install Ubuntu 18 LTS desktop on a powerful machine (most laptops give poor performance). Follow [these instructions](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview), boot from USB flash drive by creating a bootable memory stick as explain in [these tutorials](https://ubuntu.com/tutorials?topic=desktop). Download the Ubutnu iso image [here](https://releases.ubuntu.com/18.04.5/?_ga=2.174344866.1802272398.1615489706-53843902.1615489706).
-Note: installing Ubuntu 18 on the lab desktop is is not trivial due to some internal bug. Contact the responsible of this package in case Ubuntu 18.04 needs to be reinstalled on that machine.
+* Install Ubuntu 20.04 LTS desktop on a sufficiently powerful machine inteded to be used a simulation desktop (most demanding due to Gazebo simulation) or as on-board UAV computer. Note that most cheaper laptops give poor performance when running this framework. Follow [these instructions](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview), boot from USB flash drive by creating a bootable memory stick as explained in [this tutorial](https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview). Download the Ubutnu .iso desktop image [here](https://releases.ubuntu.com/focal/).
+Note TODO[move to tutorial chapter explaining the ubuntu settings]: (re)installing Ubuntu on the lab desktop is is not trivial. Contact the responsible of this package in case Ubuntu needs to be reinstalled on that machine.
+* We recommend to configure the Ubuntu machine as explained in TODO[cite tutorial chapter explaining the ubuntu settings].
+* We assume the user regularly updates and upgrades the packages on the Ubuntu machine to the most recent version by running the Software Updater or by:
+     ```bash
+     sudo apt-get update
+     ```
+     ```bash
+     sudo apt-get upgrade
+     ```
+     If there are packages which are failed to be updated or upgraded, first resolve this issue.
 
-Regularly update Ubuntu by:
-```bash
-sudo apt-get update
-```
-```bash
-sudo apt-get upgrade
-```
-If there are packages which are failed to be updated, first resolve this issue.
 ## Installation dependancies for droneswarm_brubotics 
  * If you already installed ctu or brubotics code and would like to reinstall, please follow [these steps](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#reinstalling-mrs_uav_system-and-droneswarm_brubotics).
  * If you are a first time user we advice you to first install the latest version of cmake as explained [at the end of this section](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#matlab-plots).
