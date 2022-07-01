@@ -28,9 +28,25 @@ TODO do similar as [ctu](https://github.com/ctu-mrs/mrs_uav_system#meta-reposito
 For a list of main features see [the list provided by CTU](https://github.com/ctu-mrs/mrs_uav_system#system-properties). Additionally we provide distributed control algorithms which have stronger correcness (i.e., safety, performance, computational efficiency, robustness) guarantees compared to several of the control algorithms provided by CTU as the latter rely heavily on more failure-prone user-tuned heuristics.
 
 ## Documentation
-The primary source of documentation of this project is explained here TODO[add tutorial link], but we also recommend to go through [CTU's documentation](https://ctu-mrs.github.io/). Take a look around the packages (each contains its own README), explore the launch files and be able to read the code, which we strive to keep readable. If issues arrise related to the brubotics systems open an issue [here](https://github.com/mrs-brubotics/droneswarm_brubotics/issues), if it is related to CTU's mrs_uav_system then open an issue [here](https://github.com/ctu-mrs/mrs_uav_system/issues). 
+The primary source of documentation of this project is explained here TODO[add tutorial link], but we also recommend to go through [CTU's documentation](https://ctu-mrs.github.io/). Take a look around the packages (each contains its own README), explore the launch files and be able to read the code, which we strive to keep readable. If issues arrise related to the brubotics systems open an issue [here](https://github.com/mrs-brubotics/droneswarm_brubotics/issues), if it is related to CTU's mrs_uav_system then open an issue [here](https://github.com/ctu-mrs/mrs_uav_system/issues).
+The system follows a description presented in the article: TODO[add link to tutorial style article similar as ctu]
 
-## Prerequisites
+## Unmanned Aerial Vehicles
+The droneswarm_brubotics system is currently pre-configured for the following UAV platforms, operated by R&MM. The platforms are order by the size / payload capacity. TODO[add pictures similar as ctu]
+
+## Related packages
+TODO[add those similar as ctu] The following packages are not necessarily part of our automated installation. Therefore, you might need to clone them by yourself and place them in your ROS workspace. Some of those are forks of third party repositories.
+
+## Backwards compatibility and updates
+We do not guarantee backwards compatibility at any time. The platform is evolving according to the needs of the R&MM group. Updates can be made that are not going to be compatible with users local configs, simulation worlds, tmux sessions, etc. However, when we change something which requires user action to maintain compatibility, we will create an issue in this repository labelled users-read-me. Subscribe to this repository updates and issues by clicking the Watch button in the top-right corner of this page. Recent changes requiring user action:
+* TODO[add item 1]
+* Currently there are no known backwards incompatiblities.
+We adivse also to take a look at [ackwards compatibility and updates of CTU](https://github.com/ctu-mrs/mrs_uav_system#backwards-compatibility-and-updates).
+
+## Installation
+
+
+### Prerequisites
 * Install Ubuntu 20.04 LTS desktop on a sufficiently powerful machine inteded to be used a simulation desktop (most demanding due to Gazebo simulation) or as on-board UAV computer. Note that most cheaper laptops give poor performance when running this framework. Follow [these instructions](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview), boot from USB flash drive by creating a bootable memory stick as explained in [this tutorial](https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview). Download the Ubutnu .iso desktop image [here](https://releases.ubuntu.com/focal/).
 Note TODO[move to tutorial chapter explaining the ubuntu settings]: (re)installing Ubuntu on the lab desktop is is not trivial. Contact the responsible of this package in case Ubuntu needs to be reinstalled on that machine.
 * We recommend to configure the Ubuntu machine as explained in TODO[cite tutorial chapter explaining the ubuntu settings] in order to use all its functionalities.
@@ -43,11 +59,11 @@ Note TODO[move to tutorial chapter explaining the ubuntu settings]: (re)installi
      ```
      If there are packages which are failed to be updated or upgraded, first resolve this issue.
 
-## Installation dependancies for the droneswarm_brubotics
+### Installation dependancies for the droneswarm_brubotics
  * If this machine needs a first installation of the the mrs_uav_system and the droneswarm_brubotics we advice to first install the latest version of cmake as explained [at the end of this section](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#matlab-plots) and then continue with [the installation of the mrs_uav_system](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#installation-of-the-mrs_uav_system).
  * If on this machine the mrs_uav_system and the droneswarm_brubotics needs to be reinstalled then follow [these steps](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#reinstalling-mrs_uav_system-and-droneswarm_brubotics).
 
-### Installation of the mrs_uav_system
+#### Installation of the mrs_uav_system
 * Refer yourself to the [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system#installation) and their [tutorial](https://ctu-mrs.github.io/) to install and build the software. We do not require you to install ctu's linux environment. Before installation, check that the build status is passing (green). If the build status is failing (red), you can clone proceed by replacing the checkout commit 'master' in the default install script
      ```bash
      git checkout master
@@ -98,11 +114,11 @@ mrs_uav_controllers : ff74730f42a9adf323dbfe79a99b4c85acf81104
 ```
 Do ``` catkin build ``` in the mrs_workspace folder and see if everything is built correctly.
 
-### Some known issues
+#### Some known issues
 * If after installtion of the mrs_uav_system you cannot updated your machine anymore as described above and when shutting down, the ubutnu loader displays forever, there might be this known and solved issue wiuth the google-guest-agent service. Follow the steps here (https://github.com/ctu-mrs/mrs_uav_system/discussions/76) and use htop to kill the google-guest processes. After these steps make sure you can update yuor system. If you cannot, go to Ubutnu's Software Updater and follow the steps.
 * Regularly check ctu's "Backwards compatibility and updates" section (https://github.com/ctu-mrs/mrs_uav_system#backwards-compatibility-and-updates) and see if it affects your code. 
 
-### Installation of some non standard ctu packages
+#### Installation of some non standard ctu packages
 The following packages are required dependancies of droneswarm_brubotics which have to be installed to obtain full functionality:
 ```bash
 cd ~/workspace/src/
@@ -114,7 +130,7 @@ catkin build
 ```
 * Only for onboard drone computers: for the nimbro_network to work follow the Automatic Installation steps listed in the [README](https://github.com/ctu-mrs/nimbro_network) and when requested say yes 'y' to permanantly enable multicast. TODO REFER TO DETAILED STEPS OF NIMBRO
 
-## Installation of droneswarm_brubotics
+### Installation of droneswarm_brubotics
 We provide installation scripts that set everything up for you. Our automated installation will:
 * clone [droneswarm_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics) into your git folder
 * source our ```shell_additions.sh``` script
@@ -142,9 +158,9 @@ cd droneswarm_brubotics/script/
   * First, you need to setup your ssh keys correctly by following [these steps](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). This need to be done for each machine you use. The current ssh keys can be found in the home/.shh folder. Make sure you set the Home folder to "Show Hidden Files". 
   * Also since August 2021 developers are required to use [personel access tokens](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/). Follow [these steps](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) to generate these tokes.
 
-### Simulating and experimenting with mass and motor parameters that resemble those found on UAV hardware
+#### Simulating and experimenting with mass and motor parameters that resemble those found on UAV hardware
 Some of ctu's default UAV mass (and inertia) and motor parameters (and actuator constraints) were found to be quite different from the real values estimated on the UAV hardware platforms we have built. Therefore it is important to know where, how, and in which cases these parameters can be changed.
-#### Mass:
+##### Mass:
 In order to simulate with a hardware UAV mass (2.40 kg for f450, TODO??kg for t650) some manual changes are required in the mrs_uav_system (explained for the f450):
 * Open ```~/mrs_workspace/src/simulation/ros_packages/mrs_simulation/models/mrs_robots_description/urdf/f450.xacro``` and adjust the mass: ```<xacro:property name="mass" value="${2.40-0.005*4.0-0.015-0.00001}" /> <!-- [kg] 2.40--> ```. This ensures that Gazebo simulates a UAV model with the hardware mass. Note that the xacro has slight offset from 2.4kg since afterwards some small masses (of motors, sensors) are added to the uav so we subtract them before they are added.
 * Open ```~/mrs_workspace/src/uav_core/ros_packages/mrs_uav_managers/config/simulation/f450/mass.yaml``` and adjust the mass: ```uav_mass: 2.40 #2.00 # [kg]```. This ensures that the controllers and trackers that use mass (e.g., for feedforward actions) use th hardware mass.
@@ -152,10 +168,10 @@ In order to simulate with a hardware UAV mass (2.40 kg for f450, TODO??kg for t6
 * Do not forget to do the above steps each time you reinstall the mrs_uav_system!
 For hardware experiments the UAV mass used in the controllers and trackers is the one set in the ~/.bashrc, hence the above changes do not effect operation on hardware.
 * For UAVs with payload, you need to do the same for what concerns mass of only the UAV (excluding payload mass), but you also need to ensure that the xacro of the payload has the same payload mass as the one you use in the controller and tracker. For 2 UAVs each UAV offcourse compensates for half of the bar's mass instead of the total payload mass in the case of one UAV with cable suspended load.
-#### Motor parameters:
+##### Motor parameters:
 In order to simulate and experiment with correct motor parameters that resemble hardware operation please take a look at [regulation_control_predictions_one_drone_rtk](https://github.com/mrs-brubotics/testing_brubotics/tree/master/tmux_scripts/bryan/regulation_control_predictions_one_drone_rtk) for what concerns the ```thrust_saturation``` value in ```custom_configs/gains``` and the ```motor_params``` in custom ```configs/motor_params_hardware.yaml``` and in ```custom configs/motor_params_simulation.yaml```. These are configred for the f450 UAV, the values for the t650 UAV are TODO.
 
-### Matlab Plots
+#### Matlab Plots
 * For data processing and plotting Matlab and Simulink version 2021a is at least required with the following toolboxes installed:
   * ROS toolbox
   * TODO add all toolboxes 
@@ -176,11 +192,11 @@ In order to simulate and experiment with correct motor parameters that resemble 
   ``` 
   but it will not necessarily install the newest cmake vesion.
 
-### Documentation
+#### Documentation
 * All packages have README.md files which expliain their use.
 * A general documentation package is also available. We advise all new users to read TODO chapter on info for internal collaborators. Build the documentation_brubotics package as described [here](https://github.com/mrs-brubotics/documentation_brubotics).
 
-### ROS_packages
+#### ROS_packages
 
 * __controllers_brubotics__ : [link to the github](https://github.com/mrs-brubotics/controllers_brubotics)
 
@@ -188,7 +204,7 @@ In order to simulate and experiment with correct motor parameters that resemble 
 
 * __testing_brubotics__ : [link to the github](https://github.com/mrs-brubotics/testing_brubotics)
 
-### Script folder
+#### Script folder
 
 * __install.sh__ : will link the packages to ~/workspace/src, install ROS packages, and automatically build the packages.
 
@@ -198,17 +214,17 @@ In order to simulate and experiment with correct motor parameters that resemble 
 
 * __restore_mrs_files__ : will restore mrs_workspace files from the previous overwriting.
 
-### Shell_addition folder
+#### Shell_addition folder
 
 Contains __shell_additions.sh__ : which contains the definition of waitBeforeGoTo, a bash function to detect when GoTo service can be used.
 
-### Useful_files folder
+#### Useful_files folder
 
 * __matlab_graph__ : [link to the github](https://github.com/mrs-brubotics/MatlabGraphs)
 
 * __mrs_files__ : Contains modified files that we have to implement into mrs_workspace. In the control_manager.cpp file, disable_safety features are implemented.
 
-### Adding a new repository under the default installed repositories
+#### Adding a new repository under the default installed repositories
 Update the [gitman.yaml](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.gitman.yml).
 Create a symbolic link to a directory as is explained [here](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/). First create a directory with the same name as the repo name you used in the gitman.yaml. The symbolic link is created by:
 ```bash
@@ -216,9 +232,13 @@ ln -s symLinkFolderName/ relativepathto/.gitman/repo_name_used_in_gitman.yaml
 ```
 Put ROS packages in ros_packages and other repositories elsewhere in droneswarm_brubotics. You should push the changes in droneswarm_brubotics such that the symbolic link (e.g. [example for documentation_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/documentation_brubotics)) is git version controlled.
 
-## Reinstalling mrs_uav_system and droneswarm_brubotics
+### Reinstalling mrs_uav_system and droneswarm_brubotics
 We advice to regularly reinstall the mrs_uav_system and droneswarm_brubotics to check if everything still installs correctly.
 Before reinstalling, delete the mrs_uav_system and/or droneswarm_brubotics folder inside the git folder and inside the workspace folder.
 If you would like to reinstall everything just delete the git, the mrs_workspace and the worksapce folder.
 This procedure is the same for each installed package. 
 If there are installation or building problems which you cannot solve, please open an issue immediately.
+
+## Running the simulation
+If you have successfully installed the system, you can continue with [starting the simulation](https://ctu-mrs.github.io/docs/simulation/howto.html).
+TODO[addhardware specific links]
