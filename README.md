@@ -1,5 +1,18 @@
-# droneswarm_brubotics
-All brubotics packages are based on the work of [Multi-robot Systems (MRS) Group of the CTU in Prague](https://github.com/ctu-mrs).
+# droneswarm_brubotics system
+TODO[give overview picture rviz, sim, reality]
+TODO[give overview of what this syste allows]
+
+The droneswarm_brubotics system is mainly developed at the Robotics and Multibody Mechanics (R&MM) lab of the Vrije Universiteit Brussel (VUB) which is a member of the Brussels Human Robotics Research Center (BruBotics) of the VUB. Most of the algorithms are developed in collaboration with the Robotics, Optimization, and Constrained Control (ROCC) lab of the University of Colorado Boulder.
+The main project owners and collaborator:
+* Bryan Convens ([bryan.convens@vub.be](mailto:bryan.convens@vub.be)): project owner, PhD student at R&MM
+* Kelly Merckaert: project co-owner, PhD student at R&MM
+* Marco M. Nicotra: project collaborator, Assistant Professor at ROCC reponsible for providing several ideas related to the implemented navigation and control algorithms.
+* Bram Vanderborght: project collaborator, Professor at R&MM reponsible for obtaining funding to support this project.
+* Several MA students and interns of R&MM have contributed to this project.
+
+All brubotics packages are extensions or alternatives to those provided by the [Multi-robot Systems (MRS) Group of the CTU in Prague](https://github.com/ctu-mrs) and are stuctured in the same way. We mostly work with multi-rotor Unmannded Aerial vehicles, and for them specifically, we developed this navigation, control, estimation software. This can be tested both in simulation and on real-world hardware platforms. We think that real-world and replicable experiments should support excellent research and science in robotics. Thus our platform is built to allow safe verification of these approaches in planning, control, estimation, computer vision, tracking, and more.
+
+## Meta-repositories
 
 ## Prerequisites
 * Install Ubuntu 20.04 LTS desktop on a sufficiently powerful machine inteded to be used a simulation desktop (most demanding due to Gazebo simulation) or as on-board UAV computer. Note that most cheaper laptops give poor performance when running this framework. Follow [these instructions](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview), boot from USB flash drive by creating a bootable memory stick as explained in [this tutorial](https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview). Download the Ubutnu .iso desktop image [here](https://releases.ubuntu.com/focal/).
@@ -15,18 +28,18 @@ Note TODO[move to tutorial chapter explaining the ubuntu settings]: (re)installi
      If there are packages which are failed to be updated or upgraded, first resolve this issue.
 
 ## Installation dependancies for the droneswarm_brubotics
- * If this machine needs a first installation of the the mrs_uav_system and the droneswarm_brubotics we advice to first install the latest version of cmake as explained [at the end of this section](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#matlab-plots) and then continue with [the installation of the mrs_uav_system](https://github.com/mrs-brubotics/droneswarm_brubotics/edit/master/README.md#installation-of-the-mrs_uav_system).
+ * If this machine needs a first installation of the the mrs_uav_system and the droneswarm_brubotics we advice to first install the latest version of cmake as explained [at the end of this section](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#matlab-plots) and then continue with [the installation of the mrs_uav_system](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#installation-of-the-mrs_uav_system).
  * If on this machine the mrs_uav_system and the droneswarm_brubotics needs to be reinstalled then follow [these steps](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#reinstalling-mrs_uav_system-and-droneswarm_brubotics).
 
 ### Installation of the mrs_uav_system
 * Refer yourself to the [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system#installation) and their [tutorial](https://ctu-mrs.github.io/) to install and build the software. We do not require you to install ctu's linux environment. Before installation, check that the build status is passing (green). If the build status is failing (red), you can clone proceed by replacing the checkout commit 'master' in the default install script
-```bash
-git checkout master
-```
-by the latest stable commit
-```bash
-git checkout replace_this_by_latest_stable_commit
-```
+     ```bash
+     git checkout master
+     ```
+     by the latest stable commit
+     ```bash
+     git checkout replace_this_by_latest_stable_commit
+     ```
 IMPORTANT NOTE!: currently, the brubotics code works for the mrs_uav_system of commit 7ed0fd84e4f6d37468c429038ab384c8433cf597 (their current master branch at the time of writing). BUT the following has to be done manually after installation. DO NOT FORGET TO DO THIS WHEN REINSTALLING!
   * ```bash 
        cd ~/mrs_workspace/src/uav_core/ros_packages/mrs_uav_odometry
