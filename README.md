@@ -10,9 +10,14 @@ The main project owners and collaborator:
 * Bram Vanderborght: project collaborator, Professor at R&MM reponsible for obtaining funding to support this project.
 * Several MA students and interns of R&MM have contributed to this project.
 
-All brubotics packages are extensions or alternatives to those provided by the [Multi-robot Systems (MRS) Group of the CTU in Prague](https://github.com/ctu-mrs) and are stuctured in the same way. We mostly work with multi-rotor Unmannded Aerial vehicles, and for them specifically, we developed this navigation, control, estimation software. This can be tested both in simulation and on real-world hardware platforms. We think that real-world and replicable experiments should support excellent research and science in robotics. Thus our platform is built to allow safe verification of these approaches in planning, control, estimation, computer vision, tracking, and more.
+All brubotics packages are extensions or alternatives to those provided by the [Multi-robot Systems (MRS) Group of the CTU in Prague](https://github.com/ctu-mrs) and are stuctured in the same way. We mostly work with multi-rotor Unmannded Aerial vehicles (UAVs), and for them specifically, we developed this navigation, control, estimation software. This can be tested both in simulation and on real-world hardware platforms. We think that real-world and replicable experiments should support excellent research and science in robotics. Thus our platform is built to allow safe verification of these approaches in planning, control, estimation, computer vision, tracking, and more.
 
 ## Meta-repositories
+These meta-repositories aggregate related packages.
+TODO do similar as [ctu](https://github.com/ctu-mrs/mrs_uav_system#meta-repositories)
+
+## System properties
+For a list of main features see [the list provided by CTU](https://github.com/ctu-mrs/mrs_uav_system#system-properties). Additionally we provide distributed control algorithms which have stronger correcness (i.e., safety, performance, computational efficiency, robustness) guarantees compared to several of the control algorithms provided by CTU as the latter rely heavily on more failure-prone user-tuned heuristics.
 
 ## Prerequisites
 * Install Ubuntu 20.04 LTS desktop on a sufficiently powerful machine inteded to be used a simulation desktop (most demanding due to Gazebo simulation) or as on-board UAV computer. Note that most cheaper laptops give poor performance when running this framework. Follow [these instructions](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview), boot from USB flash drive by creating a bootable memory stick as explained in [this tutorial](https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview). Download the Ubutnu .iso desktop image [here](https://releases.ubuntu.com/focal/).
