@@ -41,7 +41,7 @@ TODO[add those similar as ctu] The following packages are not necessarily part o
 We do not guarantee backwards compatibility at any time. The platform is evolving according to the needs of the R&MM group. Updates can be made that are not going to be compatible with users local configs, simulation worlds, tmux sessions, etc. However, when we change something which requires user action to maintain compatibility, we will create an issue in this repository labelled users-read-me. Subscribe to this repository updates and issues by clicking the Watch button in the top-right corner of this page. Recent changes requiring user action:
 * TODO[add item 1]
 * Currently there are no known backwards incompatiblities.
-We adivse also to take a look at [ackwards compatibility and updates of CTU](https://github.com/ctu-mrs/mrs_uav_system#backwards-compatibility-and-updates).
+We adivse also to take a look at [backwards compatibility and updates of CTU](https://github.com/ctu-mrs/mrs_uav_system#backwards-compatibility-and-updates).
 
 ## Installation
 ### Singularity and Docker
@@ -73,7 +73,7 @@ Note TODO[move to tutorial chapter explaining the ubuntu settings]: (re)installi
      ```bash
      git checkout replace_this_by_latest_stable_commit
      ```
-* ```!!! IMPORTANT NOTE !!!```: currently, the brubotics system is compatible with the mrs_uav_system of ```commit         7ed0fd84e4f6d37468c429038ab384c8433cf597```. BUT also the following has to be done manually after installation. ```DO NOT FORGET TO DO THIS WHEN REINSTALLING!```
+* ```!!! IMPORTANT NOTE !!!```: currently, the brubotics system is compatible with the mrs_uav_system of ```commit         7ed0fd84e4f6d37468c429038ab384c8433cf597```. BUT also the following packages ahve to be downgraded manually after installation. ```DO NOT FORGET TO DO THIS WHEN REINSTALLING!```
 
   mrs_uav_odometry:   
   ```bash 
@@ -98,11 +98,13 @@ Note TODO[move to tutorial chapter explaining the ubuntu settings]: (re)installi
   ```
   It works if the uavs do not keep increasing altitude. More info see this issue: https://github.com/ctu-mrs/mrs_uav_system/issues/95
 * If not all packages are built correctly, try the multiple times ```catkin build``` in the mrs_workspace folder or the full installation in a new terminal.
-If too much RAM memory is required during the building process your screen will freeze, try ```catkin build -j2``` which ensures not more than two processes are used in parallel building the software. Repeat ```catkin build``` until there are no errors and no warnings any more.
-This installation process creates the ```git```, ```mrs_workspace``` and ```workspace``` folders in your ```home``` directory. It also automatically updates your ```./bashrc``` file that is loaded each time you open a new terminal. You can find the ```./bashrc``` in the Home directory by clicking on the three bars and checking the "Show Hidden Files" box.
-To test if the installation was successful, launch the shell script ```~/mrs_workspace/src/simulation/example_tmux_scripts/one_drone_gps$ ./start.sh```. The gazebo simulator should open and a drone should be taking off.
-Avoid changing any code in any of ctu's packages, unless there is no other way to implement your functionality. If your application requires custum settings in ctu's packages, document clearly where these changes are required since these will need to be (un)done manually each time the software is reisntalled or used for other purposes.
-Regularly reinstall ctu's mrs_uav_system as it is evolving continuously and update the commits of all packages for which the droneswarm_brubotics codes works.
+* If too much RAM memory is required during the building process your screen will freeze, try ```catkin build -j2``` which ensures not more than two processes are used in parallel building the software. Repeat ```catkin build``` until there are no errors and no warnings any more.
+* This installation process creates the ```git```, ```mrs_workspace``` and ```workspace``` folders in your ```home``` directory. 
+* It also automatically updates your ```./bashrc``` file that is loaded each time you open a new terminal. You can find the ```./bashrc``` in the Home directory by clicking on the three bars and checking the "Show Hidden Files" box.
+* To test if the installation was successful, launch the shell script ```~/mrs_workspace/src/simulation/example_tmux_scripts/one_drone_gps$ ./start.sh```. The gazebo simulator should open and a drone should be taking off.
+* Avoid changing any code in any of ctu's packages, unless there is no other way to implement your functionality. If your application requires custum settings in ctu's packages, document clearly where these changes are required since these will need to be (un)done manually each time the software is reisntalled or used for other purposes.
+* Regularly reinstall ctu's mrs_uav_system as it is evolving continuously and update the commits of all packages for which the droneswarm_brubotics codes works.
+
 #### Backward compability issue
 CTU changed several of their package, see this [issue], which cause our workspace to not build correctly. This is due to the fact that our controller, and other packages rely on mrs_lib::Transformer, that has been modified. 
 To overcome this issue and still be able to use the framework, downgrade the following package with the corresponding commit (git checkout COMMITNUMBER) :
