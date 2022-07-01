@@ -61,7 +61,7 @@ Note TODO[move to tutorial chapter explaining the ubuntu settings]: (re)installi
      If there are packages which are failed to be updated or upgraded, first resolve this issue.
 
 #### Installation of the droneswarm_brubotics system dependancies
- * If this machine needs a first installation of the the mrs_uav_system and the droneswarm_brubotics we advice to first install the latest version of cmake as explained [at the end of this section](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#matlab-plots) and then continue with [the native installation of the mrs_uav_system](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#installation-of-the-mrs_uav_system).
+ * If this machine needs a first installation of the the mrs_uav_system and the droneswarm_brubotics we advice to first install the latest version of cmake as explained [at the end of this section](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#matlab-plots) and then continue with [the native installation of the mrs_uav_system](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#installation-of-the-mrs_uav_system-and-non-standard-installed-ctu-packages).
  * If on this machine the mrs_uav_system and the droneswarm_brubotics needs to be reinstalled then follow [these steps](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#reinstalling-mrs_uav_system-and-droneswarm_brubotics).
 
 ##### Installation of the mrs_uav_system and non standard installed ctu packages
