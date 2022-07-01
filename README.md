@@ -44,9 +44,10 @@ We do not guarantee backwards compatibility at any time. The platform is evolvin
 We adivse also to take a look at [ackwards compatibility and updates of CTU](https://github.com/ctu-mrs/mrs_uav_system#backwards-compatibility-and-updates).
 
 ## Installation
-
-
-### Prerequisites
+### Singularity and Docker
+TODO[do similar as ctu]
+### Native installation
+#### Prerequisites
 * Install Ubuntu 20.04 LTS desktop on a sufficiently powerful machine inteded to be used a simulation desktop (most demanding due to Gazebo simulation) or as on-board UAV computer. Note that most cheaper laptops give poor performance when running this framework. Follow [these instructions](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview), boot from USB flash drive by creating a bootable memory stick as explained in [this tutorial](https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview). Download the Ubutnu .iso desktop image [here](https://releases.ubuntu.com/focal/).
 Note TODO[move to tutorial chapter explaining the ubuntu settings]: (re)installing Ubuntu on the lab desktop is is not trivial. Contact the responsible of this package in case Ubuntu needs to be reinstalled on that machine.
 * We recommend to configure the Ubuntu machine as explained in TODO[cite tutorial chapter explaining the ubuntu settings] in order to use all its functionalities.
@@ -59,12 +60,12 @@ Note TODO[move to tutorial chapter explaining the ubuntu settings]: (re)installi
      ```
      If there are packages which are failed to be updated or upgraded, first resolve this issue.
 
-### Installation dependancies for the droneswarm_brubotics
- * If this machine needs a first installation of the the mrs_uav_system and the droneswarm_brubotics we advice to first install the latest version of cmake as explained [at the end of this section](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#matlab-plots) and then continue with [the installation of the mrs_uav_system](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#installation-of-the-mrs_uav_system).
+#### Installation of the droneswarm_brubotics system dependancies
+ * If this machine needs a first installation of the the mrs_uav_system and the droneswarm_brubotics we advice to first install the latest version of cmake as explained [at the end of this section](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#matlab-plots) and then continue with [the native installation of the mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system#native-installation).
  * If on this machine the mrs_uav_system and the droneswarm_brubotics needs to be reinstalled then follow [these steps](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#reinstalling-mrs_uav_system-and-droneswarm_brubotics).
 
-#### Installation of the mrs_uav_system
-* Refer yourself to the [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system#installation) and their [tutorial](https://ctu-mrs.github.io/) to install and build the software. We do not require you to install ctu's linux environment. Before installation, check that the build status is passing (green). If the build status is failing (red), you can clone proceed by replacing the checkout commit 'master' in the default install script
+##### Installation of the mrs_uav_system
+* Refer yourself to the [mrs_uav_system]([https://github.com/ctu-mrs/mrs_uav_system#installation](https://github.com/ctu-mrs/mrs_uav_system#native-installation)) and their [tutorial](https://ctu-mrs.github.io/) to natively install and build the software. We do not require you to install [ctu's linux environment](https://github.com/ctu-mrs/mrs_uav_system#i-want-the-linux-environment-people-from-mrs-works-with). Before installation, check [here](https://github.com/ctu-mrs/mrs_uav_system#meta-repositories) that the build status of the mrs_uav_system is passing (green). If the build status is failing (red), you can clone proceed by replacing the checkout commit 'master' in the default install script
      ```bash
      git checkout master
      ```
