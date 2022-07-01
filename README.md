@@ -2,15 +2,23 @@
 TODO[give overview picture rviz, sim, reality]
 TODO[give overview of what this syste allows]
 
-The droneswarm_brubotics system is mainly developed at the Robotics and Multibody Mechanics (R&MM) lab of the Vrije Universiteit Brussel (VUB) which is a member of the Brussels Human Robotics Research Center (BruBotics) of the VUB. Most of the algorithms are developed in collaboration with the Robotics, Optimization, and Constrained Control (ROCC) lab of the University of Colorado Boulder.
-The main project owners and collaborator:
-* Bryan Convens ([bryan.convens@vub.be](mailto:bryan.convens@vub.be)): project owner, PhD student at R&MM
-* Kelly Merckaert: project co-owner, PhD student at R&MM
-* Marco M. Nicotra: project collaborator, Assistant Professor at ROCC reponsible for providing several ideas related to the implemented navigation and control algorithms.
-* Bram Vanderborght: project collaborator, Professor at R&MM reponsible for obtaining funding to support this project.
+The droneswarm_brubotics system is a platform devloped for the fundamental and applied robotics, automation, automatic control and Artificial Intelligence (AI) research on multiple Unmannded Aerial vehicles (UAVs).
+
+It is mainly developed at the Robotics and Multibody Mechanics (R&MM) research group of the Vrije Universiteit Brussel (VUB) which is a member of VUB's Brussels Human Robotics Research Center (BruBotics) consortium. Most of the algorithms are developed in collaboration with the Robotics, Optimization, and Constrained Control (ROCC) lab of the University of Colorado Boulder.
+
+The main project owners and collaborators are:
+* Bryan Convens ([bryan.convens@vub.be](mailto:bryan.convens@vub.be)): project owner, PhD student at R&MM;
+* Kelly Merckaert: project co-owner, PhD student at R&MM;
+* Marco M. Nicotra: project collaborator, Assistant Professor at ROCC reponsible for providing several ideas related to the implemented navigation and control algorithms;
+* Bram Vanderborght: project collaborator, Professor at R&MM reponsible for obtaining funding to support this project;
 * Several MA students and interns of R&MM have contributed to this project.
 
-All brubotics packages are extensions or alternatives to those provided by the [Multi-robot Systems (MRS) Group of the CTU in Prague](https://github.com/ctu-mrs) and are stuctured in the same way. We mostly work with multi-rotor Unmannded Aerial vehicles (UAVs), and for them specifically, we developed this navigation, control, estimation software. This can be tested both in simulation and on real-world hardware platforms. We think that real-world and replicable experiments should support excellent research and science in robotics. Thus our platform is built to allow safe verification of these approaches in planning, control, estimation, computer vision, tracking, and more.
+This project has received its main funding from:
+* FWO
+* imec
+* Flanders AI Research
+
+All brubotics packages are extensions or alternatives to those provided by the [Multi-robot Systems (MRS) Group of the CTU in Prague](https://github.com/ctu-mrs) and are organized in the same way. We mostly work with multi-rotor UAVs, and for them specifically, we developed this navigation, control, estimation software. This can be tested both in simulation and on real-world hardware platforms. We think that real-world and replicable experiments should support excellent research and science in robotics. Thus our platform is built to allow safe verification of these approaches in planning, control, estimation, computer vision, tracking, and more.
 
 ## Meta-repositories
 These meta-repositories aggregate related packages.
@@ -18,6 +26,10 @@ TODO do similar as [ctu](https://github.com/ctu-mrs/mrs_uav_system#meta-reposito
 
 ## System properties
 For a list of main features see [the list provided by CTU](https://github.com/ctu-mrs/mrs_uav_system#system-properties). Additionally we provide distributed control algorithms which have stronger correcness (i.e., safety, performance, computational efficiency, robustness) guarantees compared to several of the control algorithms provided by CTU as the latter rely heavily on more failure-prone user-tuned heuristics.
+
+## Documentation
+The primary source of documentation of this project is explained here TODO[add tutorial link], but we also recommend to go through [CTU's documentation](https://ctu-mrs.github.io/). 
+Our system is a research-oriented platform, and it evolves rapidly. Most of our users are either researchers (who already know the platform) or freshmen sMaintaining up-to-date documentation for such an audience is hard work, since we mostly spend our time developing the system while using it for our research. So instead, we aim at educating our students to look around the packages (each contains its own README), explore the launch files and be able to read the code, which we strive to keep readable.
 
 ## Prerequisites
 * Install Ubuntu 20.04 LTS desktop on a sufficiently powerful machine inteded to be used a simulation desktop (most demanding due to Gazebo simulation) or as on-board UAV computer. Note that most cheaper laptops give poor performance when running this framework. Follow [these instructions](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview), boot from USB flash drive by creating a bootable memory stick as explained in [this tutorial](https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview). Download the Ubutnu .iso desktop image [here](https://releases.ubuntu.com/focal/).
