@@ -268,8 +268,8 @@ Contains __shell_additions.sh__ : which contains the definitions of used shell f
      ```
      For example: make sure .gitman/fbstab.yaml does not exist yet and droneswarm_brubotics/fbstab contains the latest version of fbstab
      ```bash
-     cd ~/workspace/src/droneswarm_brubotics
-     ln -s fbstab/ .gitman/fbstab
+     cd ~
+     ln -s .gitman/fbstab/ ~/workspace/src/droneswarm_brubotics/fbstab
      ```
      This creates the symbolic link .gitman/fbstab
 * Put ROS packages in the ros_packages directory and other repositories elsewhere in droneswarm_brubotics. 
