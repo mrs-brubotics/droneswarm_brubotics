@@ -82,11 +82,17 @@ Note TODO[move to tutorial chapter explaining the ubuntu settings]: (re)installi
      ```bash
      cd ~/mrs_workspace/src/simulation/example_tmux_scripts/one_drone_gps
      ./start.sh
+     
      ```
      The gazebo simulator should launch, together with rviz and a UAV should be taking off.
 * Avoid changing any code in any of ctu's packages, unless there is no other way to implement your functionality. If your application requires custum settings in ctu's packages, document clearly where these changes are required since these will need to be (un)done manually each time the software is reisntalled or used for other purposes.
-* Regularly reinstall ctu's mrs_uav_system as it is evolving continuously and update the commits of all packages for which the droneswarm_brubotics codes works in this readme.    
-##### Downgrading of packages installed with the mrs_uav_system
+* Regularly reinstall ctu's mrs_uav_system as it is evolving continuously and update the commits of all packages for which the droneswarm_brubotics codes works in this readme.
+* If after installtion of the mrs_uav_system you cannot updated your machine anymore as described above and when shutting down, the ubutnu loader displays forever, there might be this known and solved issue wiuth the google-guest-agent service. Follow the steps [here](https://github.com/ctu-mrs/mrs_uav_system/discussions/76) and use htop to kill the google-guest processes. After these steps make sure you can update yuor system. If you cannot, go to Ubutnu's Software Updater and follow the steps.
+* Regularly check ctu's ["Backwards compatibility and updates" section](https://github.com/ctu-mrs/mrs_uav_system#backwards-compatibility-and-updates) and see if it affects your code. 
+   
+##### Downgrading of default mrs_uav_system packages
+TODO: check if this is still valid?
+Below we prove the commits of the standard mrs_uav_sytem packages that guarantee functionality of the droneswarm_brubotics system.
   mrs_uav_odometry:   
   ```bash 
   cd ~/mrs_workspace/src/uav_core/ros_packages/mrs_uav_odometry
@@ -109,26 +115,17 @@ Note TODO[move to tutorial chapter explaining the ubuntu settings]: (re)installi
     ./start.sh
   ```
   It works if the uavs do not keep increasing altitude. More info see this issue: https://github.com/ctu-mrs/mrs_uav_system/issues/95
-
-
-#### Backward compability issue
-CTU changed several of their package, see this [issue], which cause our workspace to not build correctly. This is due to the fact that our controller, and other packages rely on mrs_lib::Transformer, that has been modified. 
-To overcome this issue and still be able to use the framework, downgrade the following package with the corresponding commit (git checkout COMMITNUMBER) :
-```
-mrs_bumper: 4d848688ea4085d7a112d9a09519fd007891cf55
-mrs_uav_manager: f5a9fe66cfc04f277835c1613a0c5a0d5c61c7ce
-mrs_uav_odometry : 186f119043d2a7dcb6171dcee83a7e880841ed83
-mrs_uav_testing ; a5409b412aaf7bab922a752f1f99912dc2a3857a
-mrs_uav_status : 7989ad126f5a110a97cb8c7767f2f9d7e566a54e
-mrs_uav_tracker : 30ad30c0d3e424b3e317946a714d20481bf03211
-mrs_uav_trajectory_generation : 0cc100e6e584f01933127c1e96cb219fdbc2aa00
-mrs_uav_controllers : ff74730f42a9adf323dbfe79a99b4c85acf81104
-```
-Do ``` catkin build ``` in the mrs_workspace folder and see if everything is built correctly.
-
-#### Some known issues
-* If after installtion of the mrs_uav_system you cannot updated your machine anymore as described above and when shutting down, the ubutnu loader displays forever, there might be this known and solved issue wiuth the google-guest-agent service. Follow the steps here (https://github.com/ctu-mrs/mrs_uav_system/discussions/76) and use htop to kill the google-guest processes. After these steps make sure you can update yuor system. If you cannot, go to Ubutnu's Software Updater and follow the steps.
-* Regularly check ctu's "Backwards compatibility and updates" section (https://github.com/ctu-mrs/mrs_uav_system#backwards-compatibility-and-updates) and see if it affects your code. 
+     ```
+     mrs_bumper: 4d848688ea4085d7a112d9a09519fd007891cf55
+     mrs_uav_manager: f5a9fe66cfc04f277835c1613a0c5a0d5c61c7ce
+     mrs_uav_odometry : 186f119043d2a7dcb6171dcee83a7e880841ed83
+     mrs_uav_testing ; a5409b412aaf7bab922a752f1f99912dc2a3857a
+     mrs_uav_status : 7989ad126f5a110a97cb8c7767f2f9d7e566a54e
+     mrs_uav_tracker : 30ad30c0d3e424b3e317946a714d20481bf03211
+     mrs_uav_trajectory_generation : 0cc100e6e584f01933127c1e96cb219fdbc2aa00
+     mrs_uav_controllers : ff74730f42a9adf323dbfe79a99b4c85acf81104
+     ```
+     Do ``` catkin build ``` in the mrs_workspace folder and see if everything is built correctly.
 
 #### Installation of some non standard ctu packages
 The following packages are required dependancies of droneswarm_brubotics which have to be installed to obtain full functionality:
