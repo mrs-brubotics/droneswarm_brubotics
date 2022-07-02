@@ -1,4 +1,4 @@
-*.fig
+#*.fig
 *.mat
 *.bag
 *.eps
