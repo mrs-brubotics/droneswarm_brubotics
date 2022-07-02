@@ -142,9 +142,12 @@ These packages are required dependancies of droneswarm_brubotics which have to b
 * trajectory_loader
 * mrs_serial
 * nimbro_network
+
 However, these will be automatically installed with the droneswarm_brubotics via [this install script](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/script/install_additional_ctu_packages.sh).
 
 Only for onboard UAV computers: for the nimbro_network to work follow the Automatic Installation steps listed in the [README](https://github.com/ctu-mrs/nimbro_network) and when requested say yes 'y' to permanantly enable multicast. TODO REFER TO DETAILED STEPS OF NIMBRO
+
+Regularly update the commits in [this install script](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/script/install_additional_ctu_packages.sh) for which functionality with droneswarm_brubotics is guaranteed.
 
 ##### Installation of other dependancies
 None for now.
