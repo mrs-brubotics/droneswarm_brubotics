@@ -266,6 +266,12 @@ Contains __shell_additions.sh__ : which contains the definitions of used shell f
      ```bash
      ln -s symLinkFolderName/ relativepathto/.gitman/repo_name_used_in_gitman.yaml
      ```
+     For example: make sure .gitman/fbstab.yaml does not exist yet and droneswarm_brubotics/fbstab contains the latest version of fbstab
+     ```bash
+     cd ~/workspace/src/droneswarm_brubotics
+     ln -s fbstab/ .gitman/fbstab
+     ```
+     This creates the symbolic link .gitman/fbstab
 * Put ROS packages in the ros_packages directory and other repositories elsewhere in droneswarm_brubotics. 
 * You should push the changes in droneswarm_brubotics such that the symbolic link (e.g., [example for documentation_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/documentation_brubotics)) is git version controlled.
 
