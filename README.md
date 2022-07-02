@@ -264,26 +264,26 @@ If there are installation or building problems which you cannot solve, please op
 See [related-packages section](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#related-packages).
 
 ### script
-* __install.sh__ : will link the packages to ~/workspace/src, install ROS packages, and automatically build the packages.
-* __pull_all.sh__ : will pull files from this github but also it will pull files for the [mrs_uav_core](https://github.com/ctu-mrs/uav_core) and for [mrs_simulation](https://github.com/ctu-mrs/simulation).
-* __overwrite_mrs_files__ : will overwrite mrs_workspace files in favour of files that you can find into useful_files/mrs_files/.
-* __restore_mrs_files__ : will restore mrs_workspace files from the previous overwriting.
+* __install.sh__ : will source shell_brubotics_additions, add specific purpose .bashrc configs, link the to be installed (ROS) packages to ~/workspace/src, installs these packages defined in .gitman.yml, and automatically builds all the packages in mrs_workspace and workspace.
+* NOT USED CURRENTLY __pull_all.sh__ : will pull files from this github but also it will pull files for the [mrs_uav_core](https://github.com/ctu-mrs/uav_core) and for [mrs_simulation](https://github.com/ctu-mrs/simulation).
+* NOT USED CURRENTLY __overwrite_mrs_files__ : will overwrite mrs_workspace files in favour of files that you can find into useful_files/mrs_files/.
+* NOT USED CURRENTLY __restore_mrs_files__ : will restore mrs_workspace files from the previous overwriting.
 
 ### shell_additions
-Contains __shell_additions.sh__ : which contains the definition of waitBeforeGoTo, a bash function to detect when GoTo service can be used.
+Contains __shell_additions.sh__ : which contains the definitions of used shell functions used in the testing_brubotics pacakge.
 
 ### useful_files
-* __matlab_graph__ : [link to the github](https://github.com/mrs-brubotics/MatlabGraphs)
-* __mrs_files__ : Contains modified files that we have to implement into mrs_workspace. In the control_manager.cpp file, disable_safety features are implemented.
+* __matlab__ : [link to the github](https://github.com/mrs-brubotics/droneswarm_brubotics/tree/master/useful_files/matlab) which contains a script that makes our custom ROS messages interpretable by Matlab.
+* NOT USED CURRENTLY __mrs_files__ : Contains modified files that we have to implement into mrs_workspace. In the control_manager.cpp file, disable_safety features are implemented.
 
-### Adding a new repository under the default installed repositories
+## Adding a new repository under the default installed repositories of droneswarm_brubotics
 * Update the [gitman.yaml](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.gitman.yml).
 * Create a symbolic link to a directory as is explained [here](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/).  
 * First create a directory with the same name as the repo name you used in the gitman.yaml. The symbolic link is created by:
      ```bash
      ln -s symLinkFolderName/ relativepathto/.gitman/repo_name_used_in_gitman.yaml
      ```
-* Put ROS packages in ros_packages and other repositories elsewhere in droneswarm_brubotics. 
+* Put ROS packages in the ros_packages directory and other repositories elsewhere in droneswarm_brubotics. 
 * You should push the changes in droneswarm_brubotics such that the symbolic link (e.g., [example for documentation_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/documentation_brubotics)) is git version controlled.
 
 ## Running the simulation
