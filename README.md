@@ -33,6 +33,7 @@ The system follows a description presented in the article: TODO[add link to tuto
 
 ## Unmanned Aerial Vehicles
 The droneswarm_brubotics system is currently pre-configured for the following UAV platforms, operated by R&MM. The platforms are order by the size / payload capacity. TODO[add pictures similar as ctu]
+![alt text](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/main/.fig/background.jpg)
 
 ## Related packages
 TODO[add those similar as ctu] The following packages are not necessarily part of our automated installation. Therefore, you might need to clone them by yourself and place them in your ROS workspace. Some of those are forks of third party repositories.
