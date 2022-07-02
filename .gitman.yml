@@ -47,15 +47,6 @@ sources:
           scripts: 
                   - git submodule update --init --recursive
 # Non-ROS packages:
-        - name: matlab_graphs
-          type: git
-          repo: git@github.com:mrs-brubotics/MatlabGraphs.git #https://github.com/mrs-brubotics/MatlabGraphs.git
-          sparse_paths:
-                  -
-          rev: master
-          link: useful_files/matlab_graphs
-          scripts:
-                  - git submodule update --init --recursive
         - name: documentation_brubotics
           type: git
           repo: git@github.com:mrs-brubotics/documentation_brubotics.git #https://github.com/mrs-brubotics/documentation_brubotics.git
