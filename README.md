@@ -151,6 +151,7 @@ git clone https://github.com/ctu-mrs/nimbro_network
 cd nimbro_network
 git checkout 86cb0e30f451b00efc6a69259cfa767848122e10
 catkin build
+
 ```
 * Only for onboard drone computers: for the nimbro_network to work follow the Automatic Installation steps listed in the [README](https://github.com/ctu-mrs/nimbro_network) and when requested say yes 'y' to permanantly enable multicast. TODO REFER TO DETAILED STEPS OF NIMBRO
 
