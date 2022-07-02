@@ -127,7 +127,7 @@ Below we prove the commits of the standard mrs_uav_sytem packages that guarantee
      ```
      Do ``` catkin build ``` in the mrs_workspace folder and see if everything is built correctly.
 
-#### Installation of some non standard ctu packages
+##### Installation of some non standard ctu packages
 The following packages are required dependancies of droneswarm_brubotics which have to be installed to obtain full functionality:
 ```bash
 cd ~/workspace/src/
@@ -158,7 +158,10 @@ catkin build
 ```
 * Only for onboard drone computers: for the nimbro_network to work follow the Automatic Installation steps listed in the [README](https://github.com/ctu-mrs/nimbro_network) and when requested say yes 'y' to permanantly enable multicast. TODO REFER TO DETAILED STEPS OF NIMBRO
 
-### Installation of droneswarm_brubotics
+##### Installation other dependancies
+None for now.
+
+#### Native installation of droneswarm_brubotics system
 We provide installation scripts that set everything up for you. Our automated installation will:
 * clone [droneswarm_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics) into your git folder
 * source our ```shell_additions.sh``` script
