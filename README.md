@@ -127,7 +127,7 @@ Below we prove the commits of the standard mrs_uav_sytem packages that guarantee
      ```
      Do ``` catkin build ``` in the mrs_workspace folder and see if everything is built correctly.
 
-##### Installation of some non standard ctu packages
+##### Installation of some non-standard ctu packages
 The following packages are required dependancies of droneswarm_brubotics which have to be installed to obtain full functionality:
 ```bash
 cd ~/workspace/src/
@@ -158,19 +158,17 @@ catkin build
 ```
 * Only for onboard drone computers: for the nimbro_network to work follow the Automatic Installation steps listed in the [README](https://github.com/ctu-mrs/nimbro_network) and when requested say yes 'y' to permanantly enable multicast. TODO REFER TO DETAILED STEPS OF NIMBRO
 
-##### Installation other dependancies
+##### Installation of other dependancies
 None for now.
 
-#### Native installation of droneswarm_brubotics system
+#### Native installation of the droneswarm_brubotics system
 We provide installation scripts that set everything up for you. Our automated installation will:
-* clone [droneswarm_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics) into your git folder
-* source our ```shell_additions.sh``` script
-* link it to your```workspace``` folder
-* install depedencies for the rospackages [controllers_brubotics](https://github.com/mrs-brubotics/controllers_brubotics), [trackers_brubotics](https://github.com/mrs-brubotics/trackers_brubotics) and [testing_brubotics](https://github.com/mrs-brubotics/testing_brubotics) into ```droneswarm/ros_packages```.
+* clone [droneswarm_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics) into your git folder;
+* source our ```shell_brubotics_additions.sh``` script;
+* link it to your```workspace``` folder;
+* install depedencies for the ROS packages [controllers_brubotics](https://github.com/mrs-brubotics/controllers_brubotics), [trackers_brubotics](https://github.com/mrs-brubotics/trackers_brubotics), [planners_brubotics](https://github.com/mrs-brubotics/planners_brubotics) and [testing_brubotics](https://github.com/mrs-brubotics/testing_brubotics) into ```droneswarm_brubotics/ros_packages```;
+* install the package [documentation_brubotics](https://github.com/mrs-brubotics/documentation_brubotics) which contains the Read the Docs tutorial;
 * build the```workspace```
-
-Install manually the following dependencies once on each new machine:
-* [documentation_brubotics](https://github.com/mrs-brubotics/documentation_brubotics/blob/main/README.md) for python3 and sphinx-rtd-theme
 
 To start the automatic installation, please paste the following code into your terminal and press **enter**
 ```bash
@@ -184,14 +182,17 @@ cd droneswarm_brubotics/script/
 ./install.sh -g $GIT_PATH
 '> clone.sh && source clone.sh
 ```
-* Manually follow the output generated during the installation process. There are no issues if during the 'Installing dependencies...' all repos are cloned and checked out sucessfully  (e.g. no uncommitted changes). You should now see these cloned repos in the git folder and in the workspace folder.
+* Follow the output generated during the installation process. There are no issues if during the 'Installing dependencies...' all repos are cloned and checked out sucessfully  (e.g., no uncommitted changes). You should now see these cloned repos in the git folder and in the workspace folder.
 * Installing the first time on a new machine will throw the error: ```git@github.com: Permission denied (publickey)```. 
-  * First, you need to setup your ssh keys correctly by following [these steps](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). This need to be done for each machine you use. The current ssh keys can be found in the home/.shh folder. Make sure you set the Home folder to "Show Hidden Files". 
-  * Also since August 2021 developers are required to use [personel access tokens](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/). Follow [these steps](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) to generate these tokes.
+  * First, you need to setup your ssh keys correctly by following [these steps](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). This needs to be done for each machine you use. The current ssh keys can be found in ```home/.shh```. Make sure you enables "Show Hidden Files" in the ```Home``` directory. 
+  * Since August 2021 developers are required to use [personel access tokens](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/). Follow [these steps](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) to generate these tokens.
+* Some packages require manual installation of the following dependencies once on each new machine:
+  * [documentation_brubotics](https://github.com/mrs-brubotics/documentation_brubotics/blob/main/README.md) for python3 and sphinx-rtd-theme
 
-#### Simulating and experimenting with mass and motor parameters that resemble those found on UAV hardware
+##### Manual changes to be made after installation
+###### Simulating and experimenting with mass and motor parameters that resemble those found on our UAV hardware
 Some of ctu's default UAV mass (and inertia) and motor parameters (and actuator constraints) were found to be quite different from the real values estimated on the UAV hardware platforms we have built. Therefore it is important to know where, how, and in which cases these parameters can be changed.
-##### Mass:
+###### Mass:
 In order to simulate with a hardware UAV mass (2.40 kg for f450, TODO??kg for t650) some manual changes are required in the mrs_uav_system (explained for the f450):
 * Open ```~/mrs_workspace/src/simulation/ros_packages/mrs_simulation/models/mrs_robots_description/urdf/f450.xacro``` and adjust the mass: ```<xacro:property name="mass" value="${2.40-0.005*4.0-0.015-0.00001}" /> <!-- [kg] 2.40--> ```. This ensures that Gazebo simulates a UAV model with the hardware mass. Note that the xacro has slight offset from 2.4kg since afterwards some small masses (of motors, sensors) are added to the uav so we subtract them before they are added.
 * Open ```~/mrs_workspace/src/uav_core/ros_packages/mrs_uav_managers/config/simulation/f450/mass.yaml``` and adjust the mass: ```uav_mass: 2.40 #2.00 # [kg]```. This ensures that the controllers and trackers that use mass (e.g., for feedforward actions) use th hardware mass.
@@ -214,7 +215,26 @@ In order to simulate and experiment with correct motor parameters that resemble 
   cmake --version
   ```
   
+  you can install the newest version of cmake by following these steps (https://apt.kitware.com/) (strongly advised). Another non-advised, but working procedure is to build any cmake version from source as explained in [Installing the Latest CMake on Ubuntu Linux](https://graspingtech.com/upgrade-cmake/). The installation procedure can take a few minutes. Do not forget to execute the last command sudo make install since it is not automatically launched when copyin#### Matlab Plots
+* For data processing and plotting Matlab and Simulink version 2021a is at least required with the following toolboxes installed:
+  * ROS toolbox
+  * TODO add all toolboxes 
+ 
+  In order to be able run the Matlab scripts that generate plots based on custom ctu mrs and/or brubotics ROS messages, first run the corresponding section of the script ```~/workspace/src/droneswarm_brubotics/useful_files/matlab/custom_msgs.m``` and perform the resulting Matlab instructions. Don't forget to include the ```matlab_msg_gen_ros1``` folder into the matlab path. Do this each time you reinstall droneswarm_brubotics.
+  Note: if matlab throws an error that a newer version of cmake is required to generate the ROS msgs and srvs, first check your version of cmake by
+  
+  ```bash
+  cmake --version
+  ```
+  
   you can install the newest version of cmake by following these steps (https://apt.kitware.com/) (strongly advised). Another non-advised, but working procedure is to build any cmake version from source as explained in [Installing the Latest CMake on Ubuntu Linux](https://graspingtech.com/upgrade-cmake/). The installation procedure can take a few minutes. Do not forget to execute the last command sudo make install since it is not automatically launched when copying the code block. When you have not deleted the old version of cmake you won't automatically find a new version and an error is reported in the terminal when checking the cmake version (this problem: https://discourse.cmake.org/t/could-not-find-cmake-root/216/13). Either now you follow the first approach or you delete the old version and remove the old version (described on the top of [Installing the Latest CMake on Ubuntu Linux](https://graspingtech.com/upgrade-cmake/)), and reinstall. The catkin build command will not work anymore. Then reinstall everything starting from the top of this page.
+  
+  You could first also try
+ 
+  ```bash  
+   sudo apt-get install cmake
+  ``` 
+  but it will not necessarily install the newest cmake vesion.g the code block. When you have not deleted the old version of cmake you won't automatically find a new version and an error is reported in the terminal when checking the cmake version (this problem: https://discourse.cmake.org/t/could-not-find-cmake-root/216/13). Either now you follow the first approach or you delete the old version and remove the old version (described on the top of [Installing the Latest CMake on Ubuntu Linux](https://graspingtech.com/upgrade-cmake/)), and reinstall. The catkin build command will not work anymore. Then reinstall everything starting from the top of this page.
   
   You could first also try
  
