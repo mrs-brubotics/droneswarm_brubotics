@@ -57,14 +57,14 @@ sources:
           scripts: 
                   - git submodule update --init --recursive
         - name: fbstab
-                type: git
-                repo: git@github.com:mrs-brubotics/fbstab.git
-                sparse_paths:
-                        -
-                rev: master
-                link: fbstab
-                scripts: 
-                   - git submodule update --init --recursive
+          type: git
+          repo: git@github.com:mrs-brubotics/fbstab.git
+          sparse_paths:
+                  -
+          rev: master
+          link: fbstab
+          scripts: 
+                  - git submodule update --init --recursive
 sources_locked:
 # ROS packages:
         - name: controllers_brubotics
@@ -77,11 +77,11 @@ sources_locked:
           scripts:
                   - git submodule update --init --recursive
         - name: fbstab
-                type: git
-                repo: git@github.com:mrs-brubotics/fbstab.git
-                sparse_paths:
-                        -
-                rev: a75544eebcb54622a90cd2c93e3554318c19f200
-                link: fbstab
-                scripts: 
-                   - git submodule update --init --recursive
+          type: git
+          repo: git@github.com:mrs-brubotics/fbstab.git
+          sparse_paths:
+                  -
+          rev: a75544eebcb54622a90cd2c93e3554318c19f200
+          link: fbstab
+          scripts: 
+                  - git submodule update --init --recursive
