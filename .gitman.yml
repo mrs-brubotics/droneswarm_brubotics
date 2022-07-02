@@ -56,3 +56,14 @@ sources:
           link: documentation_brubotics
           scripts: 
                   - git submodule update --init --recursive
+sources_locked:
+# ROS packages:
+        - name: controllers_brubotics
+          type: git
+          repo: git@github.com:mrs-brubotics/controllers_brubotics.git #https://github.com/mrs-brubotics/controllers_brubotics.git
+          sparse_paths:
+                  -
+          rev: c16e1311488d2e2a94676dc4987bcf19c94528a2
+          link: ros_packages/controllers_brubotics
+          scripts:
+                  - git submodule update --init --recursive
