@@ -260,7 +260,7 @@ If there are installation or building problems which you cannot solve, please op
 ## Documentation
 
 ### ros_packages
-See []().
+See [related-packages section](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/README.md#related-packages).
 
 ### script
 * __install.sh__ : will link the packages to ~/workspace/src, install ROS packages, and automatically build the packages.
