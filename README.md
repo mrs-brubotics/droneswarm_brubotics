@@ -41,6 +41,7 @@ TODO[add those similar as ctu] The following packages are not necessarily part o
 * [__trackers_brubotics__](https://github.com/mrs-brubotics/trackers_brubotics)
 * [__planners_brubotics__](https://github.com/mrs-brubotics/planners_brubotics)
 * [__testing_brubotics__](https://github.com/mrs-brubotics/testing_brubotics)
+* [__visualization_brubotics__](https://github.com/mrs-brubotics/visualization_brubotics)
 * [__documentation_brubotics__](https://github.com/mrs-brubotics/testingdocumentation_brubotics)
 
 ## Backwards compatibility and updates
@@ -172,7 +173,7 @@ We provide installation scripts that set everything up for you. Our automated in
 * clone [droneswarm_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics) into your git folder;
 * source our ```shell_brubotics_additions.sh``` script;
 * link it to your```workspace``` folder;
-* install depedencies for the ROS packages [controllers_brubotics](https://github.com/mrs-brubotics/controllers_brubotics), [trackers_brubotics](https://github.com/mrs-brubotics/trackers_brubotics), [planners_brubotics](https://github.com/mrs-brubotics/planners_brubotics) and [testing_brubotics](https://github.com/mrs-brubotics/testing_brubotics) into ```droneswarm_brubotics/ros_packages```;
+* install depedencies for the ROS packages [controllers_brubotics](https://github.com/mrs-brubotics/controllers_brubotics), [trackers_brubotics](https://github.com/mrs-brubotics/trackers_brubotics), [planners_brubotics](https://github.com/mrs-brubotics/planners_brubotics), [testing_brubotics](https://github.com/mrs-brubotics/testing_brubotics), and [visualization_brubotics](https://github.com/mrs-brubotics/visualization_brubotics) into ```droneswarm_brubotics/ros_packages```;
 * install the package [documentation_brubotics](https://github.com/mrs-brubotics/documentation_brubotics) which contains the Read the Docs tutorial;
 * build the```workspace```
 
