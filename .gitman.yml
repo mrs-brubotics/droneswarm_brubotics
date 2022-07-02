@@ -1,87 +1,98 @@
 location: .gitman
 sources:
 # ROS packages:
-        - name: controllers_brubotics
-          type: git
-          repo: git@github.com:mrs-brubotics/controllers_brubotics.git #https://github.com/mrs-brubotics/controllers_brubotics.git
-          sparse_paths:
-                  -
-          rev: master
-          link: ros_packages/controllers_brubotics
-          scripts:
-                  - git submodule update --init --recursive
-        - name: trackers_brubotics
-          type: git
-          repo: git@github.com:mrs-brubotics/trackers_brubotics.git #https://github.com/mrs-brubotics/trackers_brubotics.git 
-          sparse_paths:
-                  -
-          rev: master
-          link: ros_packages/trackers_brubotics
-          scripts:
-                  - git submodule update --init --recursive
-        - name: testing_brubotics
-          type: git
-          repo: git@github.com:mrs-brubotics/testing_brubotics.git #https://github.com/mrs-brubotics/testing_brubotics
-          sparse_paths:
-                  -
-          rev: master
-          link: ros_packages/testing_brubotics
-          scripts: 
-                  - git submodule update --init --recursive
-        - name: planners_brubotics
-          type: git
-          repo: git@github.com:mrs-brubotics/planners_brubotics.git #https://github.com/mrs-brubotics/planners_brubotics.git
-          sparse_paths:
-                  -
-          rev: master
-          link: ros_packages/planners_brubotics
-          scripts: 
-                  - git submodule update --init --recursive
-        - name: visualization_brubotics
-          type: git
-          repo: git@github.com:mrs-brubotics/visualization_brubotics.git #https://github.com/mrs-brubotics/visualization_brubotics.git
-          sparse_paths:
-                  -
-          rev: main
-          link: ros_packages/visualization_brubotics
-          scripts: 
-                  - git submodule update --init --recursive
-# Non-ROS packages:
-        - name: documentation_brubotics
-          type: git
-          repo: git@github.com:mrs-brubotics/documentation_brubotics.git #https://github.com/mrs-brubotics/documentation_brubotics.git
-          sparse_paths:
-                  -
-          rev: main
-          link: documentation_brubotics
-          scripts: 
-                  - git submodule update --init --recursive
-        - name: fbstab
-          type: git
-          repo: git@github.com:mrs-brubotics/fbstab.git
-          sparse_paths:
-                  -
-          rev: master
-          link: fbstab
-          scripts: 
-                  - git submodule update --init --recursive
+  - repo: git@github.com:mrs-brubotics/controllers_brubotics.git
+    name: controllers_brubotics
+    rev: master
+    type: git
+    sparse_paths:
+      -
+    links:
+      -
+    scripts:
+      - git submodule update --init --recursive
+  - repo: git@github.com:mrs-brubotics/trackers_brubotics.git
+    name: trackers_brubotics
+    rev: master
+    type: git
+    sparse_paths:
+      -
+    links:
+      -
+    scripts:
+      - git submodule update --init --recursive
+  - repo: git@github.com:mrs-brubotics/testing_brubotics.git
+    name: testing_brubotics
+    rev: master
+    type: git
+    sparse_paths:
+      -
+    links:
+      -
+    scripts:
+      - git submodule update --init --recursive
+  - repo: git@github.com:mrs-brubotics/planners_brubotics.git
+    name: planners_brubotics
+    rev: master
+    type: git
+    sparse_paths:
+      -
+    links:
+      -
+    scripts:
+      - git submodule update --init --recursive
+  - repo: git@github.com:mrs-brubotics/visualization_brubotics.git
+    name: visualization_brubotics
+    rev: main
+    type: git
+    sparse_paths:
+      -
+    links:
+      -
+    scripts:
+      - git submodule update --init --recursive
+  - repo: git@github.com:mrs-brubotics/documentation_brubotics.git
+    name: documentation_brubotics
+    rev: main
+    type: git
+    sparse_paths:
+      -
+    links:
+      -
+    scripts:
+      - git submodule update --init --recursive
+  - repo: git@github.com:mrs-brubotics/fbstab.git
+    name: fbstab
+    rev: master
+    type: git
+    sparse_paths:
+      -
+    links:
+      -
+    scripts:
+      - git submodule update --init --recursive
 sources_locked:
 # ROS packages:
-        - name: controllers_brubotics
-          type: git
-          repo: git@github.com:mrs-brubotics/controllers_brubotics.git #https://github.com/mrs-brubotics/controllers_brubotics.git
-          sparse_paths:
-                  -
-          rev: master #c16e1311488d2e2a94676dc4987bcf19c94528a2
-          link: ros_packages/controllers_brubotics
-          scripts:
-                  - git submodule update --init --recursive
-        - name: fbstab
-          type: git
-          repo: git@github.com:mrs-brubotics/fbstab.git
-          sparse_paths:
-                  -
-          rev: a75544eebcb54622a90cd2c93e3554318c19f200
-          link: fbstab
-          scripts: 
-                  - git submodule update --init --recursive
+  - repo: git@github.com:mrs-brubotics/controllers_brubotics.git
+    name: controllers_brubotics
+    rev: d4848156b241976694805229e5be6cdb2db436a0
+    type: git
+    sparse_paths:
+      -
+    links:
+      -
+    scripts:
+      - git submodule update --init --recursive
+  - repo: git@github.com:mrs-brubotics/fbstab.git
+    name: fbstab
+    rev: 2e58a0424fd641ab23469c7e39c6c71cc3fd9305
+    type: git
+    sparse_paths:
+      -
+    links:
+      -
+    scripts:
+      - git submodule update --init --recursive
+default_group: ''
+groups:
+  -
