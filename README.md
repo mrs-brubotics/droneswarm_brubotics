@@ -28,7 +28,7 @@ TODO do similar as [ctu](https://github.com/ctu-mrs/mrs_uav_system#meta-reposito
 For a list of main features see [the list provided by CTU](https://github.com/ctu-mrs/mrs_uav_system#system-properties). Additionally we provide distributed control algorithms which have stronger correcness (i.e., safety, performance, computational efficiency, robustness) guarantees compared to several of the control algorithms provided by CTU as the latter rely heavily on more failure-prone user-tuned heuristics.
 
 ## Documentation
-The primary source of documentation of this project is explained here TODO[add tutorial link], but we also recommend to go through [CTU's documentation](https://ctu-mrs.github.io/). Take a look around the packages (each contains its own README), explore the launch files and be able to read the code, which we strive to keep readable. If issues arrise related to the brubotics systems open an issue [here](https://github.com/mrs-brubotics/droneswarm_brubotics/issues), if it is related to CTU's mrs_uav_system then open an issue [here](https://github.com/ctu-mrs/mrs_uav_system/issues).
+The primary source of documentation of this project is explained here [documentation package](https://github.com/mrs-brubotics/documentation_brubotics), but we also recommend to go through [CTU's documentation](https://ctu-mrs.github.io/). We advise all new users to read through all tutorials and README files of all packages before using this system. Take a look around the packages (each contains its own README), explore the launch files and be able to read the code, which we strive to keep readable. If issues arrise related to the brubotics systems open an issue [here](https://github.com/mrs-brubotics/droneswarm_brubotics/issues), if it is related to CTU's mrs_uav_system then open an issue [here](https://github.com/ctu-mrs/mrs_uav_system/issues).
 The system follows a description presented in the article: TODO[add link to tutorial style article similar as ctu]
 
 ## Unmanned Aerial Vehicles
@@ -36,6 +36,11 @@ The droneswarm_brubotics system is currently pre-configured for the following UA
 
 ## Related packages
 TODO[add those similar as ctu] The following packages are not necessarily part of our automated installation. Therefore, you might need to clone them by yourself and place them in your ROS workspace. Some of those are forks of third party repositories.
+* [__controllers_brubotics__](https://github.com/mrs-brubotics/controllers_brubotics)
+* [__trackers_brubotics__](https://github.com/mrs-brubotics/trackers_brubotics)
+* [__planners_brubotics__](https://github.com/mrs-brubotics/planners_brubotics)
+* [__testing_brubotics__](https://github.com/mrs-brubotics/testing_brubotics)
+* [__documentation_brubotics__](https://github.com/mrs-brubotics/testingdocumentation_brubotics)
 
 ## Backwards compatibility and updates
 We do not guarantee backwards compatibility at any time. The platform is evolving according to the needs of the R&MM group. Updates can be made that are not going to be compatible with users local configs, simulation worlds, tmux sessions, etc. However, when we change something which requires user action to maintain compatibility, we will create an issue in this repository labelled users-read-me. Subscribe to this repository updates and issues by clicking the Watch button in the top-right corner of this page. Recent changes requiring user action:
@@ -192,7 +197,7 @@ cd droneswarm_brubotics/script/
 ##### Manual changes to be made after installation
 ###### Simulating and experimenting with mass and motor parameters that resemble those found on our UAV hardware
 Some of ctu's default UAV mass (and inertia) and motor parameters (and actuator constraints) were found to be quite different from the real values estimated on the UAV hardware platforms we have built. Therefore it is important to know where, how, and in which cases these parameters can be changed.
-###### Mass:
+__Mass__:
 In order to simulate with a hardware UAV mass (2.40 kg for f450, TODO??kg for t650) some manual changes are required in the mrs_uav_system (explained for the f450):
 * Open ```~/mrs_workspace/src/simulation/ros_packages/mrs_simulation/models/mrs_robots_description/urdf/f450.xacro``` and adjust the mass: ```<xacro:property name="mass" value="${2.40-0.005*4.0-0.015-0.00001}" /> <!-- [kg] 2.40--> ```. This ensures that Gazebo simulates a UAV model with the hardware mass. Note that the xacro has slight offset from 2.4kg since afterwards some small masses (of motors, sensors) are added to the uav so we subtract them before they are added.
 * Open ```~/mrs_workspace/src/uav_core/ros_packages/mrs_uav_managers/config/simulation/f450/mass.yaml``` and adjust the mass: ```uav_mass: 2.40 #2.00 # [kg]```. This ensures that the controllers and trackers that use mass (e.g., for feedforward actions) use th hardware mass.
@@ -200,7 +205,7 @@ In order to simulate with a hardware UAV mass (2.40 kg for f450, TODO??kg for t6
 * Do not forget to do the above steps each time you reinstall the mrs_uav_system!
 For hardware experiments the UAV mass used in the controllers and trackers is the one set in the ~/.bashrc, hence the above changes do not effect operation on hardware.
 * For UAVs with payload, you need to do the same for what concerns mass of only the UAV (excluding payload mass), but you also need to ensure that the xacro of the payload has the same payload mass as the one you use in the controller and tracker. For 2 UAVs each UAV offcourse compensates for half of the bar's mass instead of the total payload mass in the case of one UAV with cable suspended load.
-##### Motor parameters:
+__Motor parameters__:
 In order to simulate and experiment with correct motor parameters that resemble hardware operation please take a look at [regulation_control_predictions_one_drone_rtk](https://github.com/mrs-brubotics/testing_brubotics/tree/master/tmux_scripts/bryan/regulation_control_predictions_one_drone_rtk) for what concerns the ```thrust_saturation``` value in ```custom_configs/gains``` and the ```motor_params``` in custom ```configs/motor_params_hardware.yaml``` and in ```custom configs/motor_params_simulation.yaml```. These are configred for the f450 UAV, the values for the t650 UAV are TODO.
 
 #### Matlab Plots
@@ -243,17 +248,9 @@ In order to simulate and experiment with correct motor parameters that resemble 
   ``` 
   but it will not necessarily install the newest cmake vesion.
 
-#### Documentation
-* All packages have README.md files which expliain their use.
-* A general documentation package is also available. We advise all new users to read TODO chapter on info for internal collaborators. Build the documentation_brubotics package as described [here](https://github.com/mrs-brubotics/documentation_brubotics).
+### Documentation
 
-#### ROS_packages
 
-* __controllers_brubotics__ : [link to the github](https://github.com/mrs-brubotics/controllers_brubotics)
-
-* __trackers_brubotics__ : [link to the github](https://github.com/mrs-brubotics/trackers_brubotics)
-
-* __testing_brubotics__ : [link to the github](https://github.com/mrs-brubotics/testing_brubotics)
 
 #### Script folder
 
