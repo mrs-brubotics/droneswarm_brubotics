@@ -208,6 +208,13 @@ For hardware experiments the UAV mass used in the controllers and trackers is th
 __Motor parameters__:
 In order to simulate and experiment with correct motor parameters that resemble hardware operation please take a look at [regulation_control_predictions_one_drone_rtk](https://github.com/mrs-brubotics/testing_brubotics/tree/master/tmux_scripts/bryan/regulation_control_predictions_one_drone_rtk) for what concerns the ```thrust_saturation``` value in ```custom_configs/gains``` and the ```motor_params``` in custom ```configs/motor_params_hardware.yaml``` and in ```custom configs/motor_params_simulation.yaml```. These are configred for the f450 UAV, the values for the t650 UAV are TODO.
 
+#### Reinstalling mrs_uav_system and droneswarm_brubotics
+We advice to regularly reinstall the mrs_uav_system and droneswarm_brubotics to check if everything still installs correctly.
+Before reinstalling, delete the mrs_uav_system and/or droneswarm_brubotics folder inside the git folder and inside the workspace folder.
+If you would like to reinstall everything just delete the git, the mrs_workspace and the worksapce folder.
+This procedure is the same for each installed package. 
+If there are installation or building problems which you cannot solve, please open an issue immediately.
+
 #### Matlab Plots
 * For data processing and plotting Matlab and Simulink version 2021a is at least required with the following toolboxes installed:
   * ROS toolbox
@@ -248,44 +255,33 @@ In order to simulate and experiment with correct motor parameters that resemble 
   ``` 
   but it will not necessarily install the newest cmake vesion.
 
-### Documentation
+## Documentation
 
+### ros_packages
+See []().
 
-
-#### Script folder
-
+### script
 * __install.sh__ : will link the packages to ~/workspace/src, install ROS packages, and automatically build the packages.
-
 * __pull_all.sh__ : will pull files from this github but also it will pull files for the [mrs_uav_core](https://github.com/ctu-mrs/uav_core) and for [mrs_simulation](https://github.com/ctu-mrs/simulation).
-
 * __overwrite_mrs_files__ : will overwrite mrs_workspace files in favour of files that you can find into useful_files/mrs_files/.
-
 * __restore_mrs_files__ : will restore mrs_workspace files from the previous overwriting.
 
-#### Shell_addition folder
-
+### shell_additions
 Contains __shell_additions.sh__ : which contains the definition of waitBeforeGoTo, a bash function to detect when GoTo service can be used.
 
-#### Useful_files folder
-
+### useful_files
 * __matlab_graph__ : [link to the github](https://github.com/mrs-brubotics/MatlabGraphs)
-
 * __mrs_files__ : Contains modified files that we have to implement into mrs_workspace. In the control_manager.cpp file, disable_safety features are implemented.
 
-#### Adding a new repository under the default installed repositories
-Update the [gitman.yaml](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.gitman.yml).
-Create a symbolic link to a directory as is explained [here](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/). First create a directory with the same name as the repo name you used in the gitman.yaml. The symbolic link is created by:
-```bash
-ln -s symLinkFolderName/ relativepathto/.gitman/repo_name_used_in_gitman.yaml
-```
-Put ROS packages in ros_packages and other repositories elsewhere in droneswarm_brubotics. You should push the changes in droneswarm_brubotics such that the symbolic link (e.g. [example for documentation_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/documentation_brubotics)) is git version controlled.
-
-### Reinstalling mrs_uav_system and droneswarm_brubotics
-We advice to regularly reinstall the mrs_uav_system and droneswarm_brubotics to check if everything still installs correctly.
-Before reinstalling, delete the mrs_uav_system and/or droneswarm_brubotics folder inside the git folder and inside the workspace folder.
-If you would like to reinstall everything just delete the git, the mrs_workspace and the worksapce folder.
-This procedure is the same for each installed package. 
-If there are installation or building problems which you cannot solve, please open an issue immediately.
+### Adding a new repository under the default installed repositories
+* Update the [gitman.yaml](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.gitman.yml).
+* Create a symbolic link to a directory as is explained [here](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/).  
+* First create a directory with the same name as the repo name you used in the gitman.yaml. The symbolic link is created by:
+     ```bash
+     ln -s symLinkFolderName/ relativepathto/.gitman/repo_name_used_in_gitman.yaml
+     ```
+* Put ROS packages in ros_packages and other repositories elsewhere in droneswarm_brubotics. 
+* You should push the changes in droneswarm_brubotics such that the symbolic link (e.g., [example for documentation_brubotics](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/documentation_brubotics)) is git version controlled.
 
 ## Running the simulation
 If you have successfully installed the system, you can continue with [starting the simulation](https://ctu-mrs.github.io/docs/simulation/howto.html).
