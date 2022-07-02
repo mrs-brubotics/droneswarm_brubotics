@@ -37,11 +37,11 @@ The droneswarm_brubotics system is currently pre-configured for the following UA
 
 ## Related packages
 TODO[add those similar as ctu] The following packages are not necessarily part of our automated installation. Therefore, you might need to clone them by yourself and place them in your ROS workspace. Some of those are forks of third party repositories.
-* [__controllers_brubotics__](https://github.com/mrs-brubotics/controllers_brubotics)
-* [__trackers_brubotics__](https://github.com/mrs-brubotics/trackers_brubotics)
-* [__planners_brubotics__](https://github.com/mrs-brubotics/planners_brubotics)
-* [__testing_brubotics__](https://github.com/mrs-brubotics/testing_brubotics)
-* [__visualization_brubotics__](https://github.com/mrs-brubotics/visualization_brubotics)
+* [__controllers_brubotics__](https://github.com/mrs-brubotics/controllers_brubotics): ROS
+* [__trackers_brubotics__](https://github.com/mrs-brubotics/trackers_brubotics): ROS
+* [__planners_brubotics__](https://github.com/mrs-brubotics/planners_brubotics): ROS
+* [__testing_brubotics__](https://github.com/mrs-brubotics/testing_brubotics): ROS
+* [__visualization_brubotics__](https://github.com/mrs-brubotics/visualization_brubotics): ROS
 * [__documentation_brubotics__](https://github.com/mrs-brubotics/testingdocumentation_brubotics)
 
 ## Backwards compatibility and updates
