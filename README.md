@@ -207,7 +207,7 @@ If there are installation or building problems which you cannot solve, please op
   * TODO add all toolboxes 
  
   In order to be able run the Matlab scripts that generate plots based on custom ctu mrs and/or brubotics ROS messages, first run the corresponding section of the script ```~/workspace/src/droneswarm_brubotics/useful_files/matlab/custom_msgs.m``` and perform the resulting Matlab instructions. Don't forget to include the ```matlab_msg_gen_ros1``` folder into the matlab path. Do this each time you reinstall droneswarm_brubotics.
-  Note: if matlab throws an error that a newer version of cmake is required to generate the ROS msgs and srvs, first check your version of cmake by
+  Note: if matlab throws an error that a newer version of cmake is required to generate the ROS msgs and srvs (`this error <https://nl.mathworks.com/matlabcentral/answers/623103-matlab-2020b-rosgenmsg-can-t-find-cmake>`__), first check your version of cmake by
   
   ```bash
   cmake --version
