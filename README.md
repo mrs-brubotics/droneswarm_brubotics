@@ -213,18 +213,6 @@ If there are installation or building problems which you cannot solve, please op
   cmake --version
   ```
   
-  you can install the newest version of cmake by following these steps (https://apt.kitware.com/) (strongly advised). Another non-advised, but working procedure is to build any cmake version from source as explained in [Installing the Latest CMake on Ubuntu Linux](https://graspingtech.com/upgrade-cmake/). The installation procedure can take a few minutes. Do not forget to execute the last command sudo make install since it is not automatically launched when copyin#### Matlab Plots
-* For data processing and plotting Matlab and Simulink version 2021a is at least required with the following toolboxes installed:
-  * ROS toolbox
-  * TODO add all toolboxes 
- 
-  In order to be able run the Matlab scripts that generate plots based on custom ctu mrs and/or brubotics ROS messages, first run the corresponding section of the script ```~/workspace/src/droneswarm_brubotics/useful_files/matlab/custom_msgs.m``` and perform the resulting Matlab instructions. Don't forget to include the ```matlab_msg_gen_ros1``` folder into the matlab path. Do this each time you reinstall droneswarm_brubotics.
-  Note: if matlab throws an error that a newer version of cmake is required to generate the ROS msgs and srvs, first check your version of cmake by
-  
-  ```bash
-  cmake --version
-  ```
-  
   you can install the newest version of cmake by following these steps (https://apt.kitware.com/) (strongly advised). Another non-advised, but working procedure is to build any cmake version from source as explained in [Installing the Latest CMake on Ubuntu Linux](https://graspingtech.com/upgrade-cmake/). The installation procedure can take a few minutes. Do not forget to execute the last command sudo make install since it is not automatically launched when copying the code block. When you have not deleted the old version of cmake you won't automatically find a new version and an error is reported in the terminal when checking the cmake version (this problem: https://discourse.cmake.org/t/could-not-find-cmake-root/216/13). Either now you follow the first approach or you delete the old version and remove the old version (described on the top of [Installing the Latest CMake on Ubuntu Linux](https://graspingtech.com/upgrade-cmake/)), and reinstall. The catkin build command will not work anymore. Then reinstall everything starting from the top of this page.
   
   You could first also try
