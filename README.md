@@ -2,8 +2,9 @@
 ![alt text](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.fig/collision_avoidance_2F450s.png)
 ![alt text](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.fig/rviz_collision_avoidance.png)
 
-TODO[give overview picture rviz, sim, reality]
-TODO[give overview of what this syste allows]
+*  TODO[give overview picture rviz, sim, reality]
+*  TODO[give overview of what this syste allows]
+*  TODO check symbolic link [explanation](https://github.com/panda-brubotics/safe_panda/blob/master/README.md) 
 
 The droneswarm_brubotics system is a platform devloped for the fundamental and applied robotics, automation, automatic control and Artificial Intelligence (AI) research on multiple Unmannded Aerial vehicles (UAVs).
 
