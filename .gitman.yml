@@ -21,7 +21,7 @@ sources:
       -
     scripts:
       - git submodule update --init --recursive
-  - repo: git@github.com:mrs-brubotics/testing_brubotics.git
+  - repo: https://github.com/mrs-brubotics/testing_brubotics.git
     name: testing_brubotics
     rev: master
     type: git
