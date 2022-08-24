@@ -1,6 +1,16 @@
 location: .gitman
 sources:
 # ROS packages:
+  - repo: https://github.com/mrs-brubotics/testing_brubotics.git
+    name: testing_brubotics
+    rev: master
+    type: git
+    sparse_paths:
+      -
+    links:
+      -
+    scripts:
+      - git submodule update --init --recursive
   - repo: git@github.com:mrs-brubotics/controllers_brubotics.git
     name: controllers_brubotics
     rev: master
@@ -13,16 +23,6 @@ sources:
       - git submodule update --init --recursive
   - repo: git@github.com:mrs-brubotics/trackers_brubotics.git
     name: trackers_brubotics
-    rev: master
-    type: git
-    sparse_paths:
-      -
-    links:
-      -
-    scripts:
-      - git submodule update --init --recursive
-  - repo: https://github.com/mrs-brubotics/testing_brubotics.git
-    name: testing_brubotics
     rev: master
     type: git
     sparse_paths:
