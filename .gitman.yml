@@ -51,16 +51,16 @@ sources:
       -
     scripts:
       - git submodule update --init --recursive
-  - repo: git@github.com:mrs-brubotics/documentation_brubotics.git
-    name: documentation_brubotics
-    rev: main
-    type: git
-    sparse_paths:
-      -
-    links:
-      -
-    scripts:
-      - git submodule update --init --recursive
+#  - repo: git@github.com:mrs-brubotics/documentation_brubotics.git
+#    name: documentation_brubotics
+#    rev: main
+#    type: git
+#    sparse_paths:
+#      -
+#    links:
+#      -
+#    scripts:
+#      - git submodule update --init --recursive
   - repo: git@github.com:mrs-brubotics/fbstab.git
     name: fbstab
     rev: master
