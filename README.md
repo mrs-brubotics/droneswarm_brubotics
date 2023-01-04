@@ -60,7 +60,7 @@ TODO[do similar as ctu]
 #### Prerequisites
 * Install Ubuntu 20.04 LTS desktop on a sufficiently powerful machine inteded to be used a simulation desktop (most demanding due to Gazebo simulation) or as on-board UAV computer. Note that most cheaper laptops give poor performance when running this framework. Follow [these instructions](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview), boot from USB flash drive by creating a bootable memory stick as explained in [this tutorial](https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview). Download the Ubutnu .iso desktop image [here](https://releases.ubuntu.com/focal/).
 Note TODO[move to tutorial chapter explaining the ubuntu settings]: (re)installing Ubuntu on the lab desktop is is not trivial. Contact the responsible of this package in case Ubuntu needs to be reinstalled on that machine.
-* We recommend to configure the Ubuntu machine as explained in [this tutorial]([https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview](https://github.com/mrs-brubotics/documentation_brubotics/blob/main/source/Information_for_Internal_Collaborators.rst)) in order to use all its functionalities.
+* We recommend to configure the Ubuntu machine as explained in [this tutorial](https://github.com/mrs-brubotics/documentation_brubotics/blob/main/source/Information_for_Internal_Collaborators.rst) in order to use all its functionalities.
 * We assume the user regularly updates and upgrades the packages on the Ubuntu machine to the most recent version by running the Software Updater or by:
      ```bash
      sudo apt-get update
