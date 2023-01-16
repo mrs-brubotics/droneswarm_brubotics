@@ -95,6 +95,12 @@ Note TODO[move to tutorial chapter explaining the ubuntu settings]: (re)installi
      
      ```
      The gazebo simulator should launch, together with rviz and a UAV should be taking off.
+     ```bash
+     cd ~/mrs_workspace/src/simulation/example_tmux_scripts/one_drone_rtk
+     ./start.sh
+     
+     ```
+     Now the same should happen, but odometry should be set to RTK instead of normal GPS.
 * Avoid changing any code in any of ctu's packages, unless there is no other way to implement your functionality. If your application requires custum settings in ctu's packages, document clearly where these changes are required since these will need to be (un)done manually each time the software is reisntalled or used for other purposes.
 * Regularly reinstall ctu's mrs_uav_system as it is evolving continuously and update the commits of all packages for which the droneswarm_brubotics codes works in this readme.
 * If after installtion of the mrs_uav_system you cannot updated your machine anymore as described above and when shutting down, the ubutnu loader displays forever, there might be this known and solved issue wiuth the google-guest-agent service. Follow the steps [here](https://github.com/ctu-mrs/mrs_uav_system/discussions/76) and use htop to kill the google-guest processes. After these steps make sure you can update yuor system. If you cannot, go to Ubutnu's Software Updater and follow the steps.
