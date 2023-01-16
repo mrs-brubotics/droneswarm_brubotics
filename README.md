@@ -81,7 +81,7 @@ Note TODO[move to tutorial chapter explaining the ubuntu settings]: (re)installi
      ```
      by the latest stable commit
      ```bash
-     git checkout 7ed0fd84e4f6d37468c429038ab384c8433cf597
+     git checkout ba528c5e89aaf109731fb3bda5dc53219d513952
      ```
      which basically downgrades the mrs_uav_system as to ensure compatibility with the droneswarm_brubotics system.
 * If not all packages are built correctly, try the multiple times ```catkin build``` in the mrs_workspace folder or the full installation in a new terminal.
