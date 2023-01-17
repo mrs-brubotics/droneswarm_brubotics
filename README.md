@@ -169,6 +169,9 @@ cd droneswarm_brubotics/script/
   * [documentation_brubotics](https://github.com/mrs-brubotics/documentation_brubotics/blob/main/README.md) for python3 and sphinx-rtd-theme
 
 ##### Manual changes to be made after installation
+###### Colorblind mode of the status window
+If you are NOT colorblind, set colorblind_mode: False in the ```~/mrs_workspace/src/uav_core/ros_packages/mrs_uav_status/config/default.yaml```.
+
 ###### Simulating and experimenting with mass and motor parameters that resemble those found on our UAV hardware
 Some of ctu's default UAV mass (and inertia) and motor parameters (and actuator constraints) were found to be quite different from the real values estimated on the UAV hardware platforms we have built. Therefore it is important to know where, how, and in which cases these parameters can be changed.
 __Mass__:
