@@ -107,42 +107,23 @@ Note TODO[move to tutorial chapter explaining the ubuntu settings]: (re)installi
 * Regularly check ctu's ["Backwards compatibility and updates" section](https://github.com/ctu-mrs/mrs_uav_system#backwards-compatibility-and-updates) and see if it affects your code. 
    
 ##### Downgrading of default mrs_uav_system packages
-TODO: check if this is still valid?
 Below we prove the commits of the standard mrs_uav_sytem packages that guarantee functionality of the droneswarm_brubotics system.
-  mrs_uav_odometry:   
+  mrs_package_to_downgrade:   
   ```bash 
-  cd ~/mrs_workspace/src/uav_core/ros_packages/mrs_uav_odometry
+  cd ~/mrs_workspace/src/.../mrs_package_to_downgrade
   git pull origin master
-  git checkout d65c7d4c6c7b80f50d6d467f55d05f5197847686
-  ```
-  mrs_lib:
-  ```bash 
-  cd ~/mrs_workspace/src/uav_core/ros_packages/mrs_lib
-  git pull origin master
-  git checkout d6c17dcae2a163ff0bdc566f6d0eab1702828bb3 
+  git checkout commit_to_downgrade
   ```
   Rebuild the mrs_uav_system:
   ```bash
+  cd ~/mrs_workspace
   catkin build 
   ```
-  Test the one_drone_gps_baro.sh script. 
+  Test a .sh script. 
   ```bash
-    cd ~/mrs_workspace/src/simulation/example_tmux_scripts/one_drone_gps_baro/
+    cd ~/mrs_workspace/src/simulation/example_tmux_scripts/.../
     ./start.sh
   ```
-  It works if the uavs do not keep increasing altitude. More info see this issue: https://github.com/ctu-mrs/mrs_uav_system/issues/95
-     ```
-     mrs_bumper: 4d848688ea4085d7a112d9a09519fd007891cf55
-     mrs_uav_manager: f5a9fe66cfc04f277835c1613a0c5a0d5c61c7ce
-     mrs_uav_odometry : 186f119043d2a7dcb6171dcee83a7e880841ed83
-     mrs_uav_testing ; a5409b412aaf7bab922a752f1f99912dc2a3857a
-     mrs_uav_status : 7989ad126f5a110a97cb8c7767f2f9d7e566a54e
-     mrs_uav_tracker : 30ad30c0d3e424b3e317946a714d20481bf03211
-     mrs_uav_trajectory_generation : 0cc100e6e584f01933127c1e96cb219fdbc2aa00
-     mrs_uav_controllers : ff74730f42a9adf323dbfe79a99b4c85acf81104
-     ```
-     Do ``` catkin build ``` in the mrs_workspace folder and see if everything is built correctly.
-
 ##### Installation of some non-standard ctu packages
 These packages are required dependancies of droneswarm_brubotics which have to be installed to obtain full functionality:
 * mrs_gazebo_extras_resources
