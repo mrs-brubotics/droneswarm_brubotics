@@ -16,7 +16,7 @@ cd ~/workspace/src/
 rm -rf trajectory_loader
 git clone https://github.com/ctu-mrs/trajectory_loader 
 cd trajectory_loader
-git checkout 1da108271b2c20f3c16c9e6bc94cd9e807bbdc3c #719b1600f56e2d2d8cf0290c5ec03a0f56d6bd7c
+git checkout 1da108271b2c20f3c16c9e6bc94cd9e807bbdc3c
 #catkin build
 echo "$0: mrs_serial"
 cd ~/workspace/src/
