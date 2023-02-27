@@ -9,7 +9,7 @@ cd ~/workspace/src/
 rm -rf mrs_gazebo_extras_resources
 git clone https://github.com/ctu-mrs/mrs_gazebo_extras_resources
 cd mrs_gazebo_extras_resources
-git checkout 2e38e69c178f70f38cf8c8042cb95a7565f07344 #22bf7c10fae81078f034bbd9ef0549b2e0b7de69
+git checkout 2e38e69c178f70f38cf8c8042cb95a7565f07344
 #catkin build
 echo "$0: trajectory_loader"
 cd ~/workspace/src/
