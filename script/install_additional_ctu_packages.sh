@@ -30,5 +30,5 @@ cd ~/workspace/src/
 rm -rf nimbro_network
 git clone https://github.com/ctu-mrs/nimbro_network
 cd nimbro_network
-git checkout develop
+git checkout 5068b6413372c309542a95ad522642d9406fa66f
 #catkin build
