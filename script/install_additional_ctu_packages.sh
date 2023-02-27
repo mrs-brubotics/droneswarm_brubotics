@@ -23,7 +23,7 @@ cd ~/workspace/src/
 rm -rf mrs_serial
 git clone https://github.com/ctu-mrs/mrs_serial
 cd mrs_serial
-git checkout 8e234320d82f996eb3c1268cc5c232ae1eabdf75 #c8eb7fb3b29f36c878d7c65043639d12da2a80bf
+git checkout 8e234320d82f996eb3c1268cc5c232ae1eabdf75
 #catkin build
 echo "$0: nimbro_network"
 cd ~/workspace/src/
