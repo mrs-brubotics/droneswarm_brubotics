@@ -6,40 +6,42 @@
 *  TODO[give overview of what this syste allows]
 *  TODO check symbolic link [explanation](https://github.com/panda-brubotics/safe_panda/blob/master/README.md) 
 
-The droneswarm_brubotics system is a platform devloped for the fundamental and applied robotics, automation, automatic control and Artificial Intelligence (AI) research on multiple Unmannded Aerial vehicles (UAVs).
+The droneswarm_brubotics system is a software framework for fundamental and applied research in robotics, automation, control, and AI with a focus on multi-robot systems composed of Unmanned Aerial vehicles (UAVs).
 
-It is mainly developed at the Robotics and Multibody Mechanics (R&MM) research group of the Vrije Universiteit Brussel (VUB) which is a member of VUB's Brussels Human Robotics Research Center (BruBotics) consortium. Most of the algorithms are developed in collaboration with the Robotics, Optimization, and Constrained Control (ROCC) lab of the University of Colorado Boulder.
+It is mainly developed at the Robotics and Multibody Mechanics (R&MM) research group of the Vrije Universiteit Brussel (VUB), Belgium, which is a member of VUB's Brussels Human Robotics Research Center (BruBotics) consortium. Several of the packages were developed in collaboration with the Robotics, Optimization, and Constrained Control (ROCC) lab of the University of Colorado Boulder, USA.
 
 The main project owners and collaborators are:
-* Bryan Convens ([bryan.convens@vub.be](mailto:bryan.convens@vub.be)): project owner, PhD student at R&MM;
-* Kelly Merckaert: project co-owner, PhD student at R&MM;
-* Marco M. Nicotra: project collaborator, Assistant Professor at ROCC reponsible for providing several ideas related to the implemented navigation and control algorithms;
+* Bryan Convens ([bryan.convens@vub.be](mailto:bryan.convens@vub.be)): project owner, postdoc at R&MM;
+* Kelly Merckaert: project co-owner, postdoc student at R&MM;
+* Marco M. Nicotra: project collaborator, Assistant Professor at ROCC responsible for providing several ideas related to the implemented navigation and control algorithms;
 * Bram Vanderborght: project collaborator, Professor at R&MM reponsible for obtaining funding to support this project;
-* Several MA students and interns of R&MM have contributed to this project.
+* Several MA2 students and interns at R&MM have contributed to this project.
 
-This project has received its main funding from:
+This project would not have been possible without the funding from:
 * FWO
 * imec
 * Flanders AI Research
 
-All brubotics packages are extensions or alternatives to those provided by the [Multi-robot Systems (MRS) Group of the CTU in Prague](https://github.com/ctu-mrs) and are organized in the same way. We mostly work with multi-rotor UAVs, and for them specifically, we developed this navigation, control, estimation software. This can be tested both in simulation and on real-world hardware platforms. We think that real-world and replicable experiments should support excellent research and science in robotics. Thus our platform is built to allow safe verification of these approaches in planning, control, estimation, computer vision, tracking, and more.
+All packages are extensions or alternatives to those provided by the [Multi-robot Systems (MRS) Group of the CTU in Prague](https://github.com/ctu-mrs) and are organized in the same way. We mostly work with multi-rotor UAVs, and for them specifically, we developed this navigation, control, and estimation software. This can be tested both in simulation and on real-world robotic platforms. We believe that real-world and replicable experiments should support excellent research and science in robotics. Our platform is built to allow safe verification of these approaches in planning, control, estimation, computer vision, tracking, and more.
 
 ## Meta-repositories
 These meta-repositories aggregate related packages.
 TODO do similar as [ctu](https://github.com/ctu-mrs/mrs_uav_system#meta-repositories)
 
 ## System properties
-For a list of main features see [the list provided by CTU](https://github.com/ctu-mrs/mrs_uav_system#system-properties). Additionally we provide distributed control algorithms which have stronger correcness (i.e., safety, performance, computational efficiency, robustness) guarantees compared to several of the control algorithms provided by CTU as the latter rely heavily on more failure-prone user-tuned heuristics.
+For a list of main features see [the list provided by CTU](https://github.com/ctu-mrs/mrs_uav_system#system-properties). Additionally, we provide distributed control algorithms that have stronger correctness (i.e., safety, performance, computational efficiency, robustness) guarantees compared to several of the control algorithms provided by CTU as the latter rely heavily on more failure-prone user-tuned heuristics.
 
 ## Documentation
-The primary source of documentation of this project is explained here [documentation package](https://github.com/mrs-brubotics/documentation_brubotics), but we also recommend to go through [CTU's documentation](https://ctu-mrs.github.io/). We advise all new users to read through all tutorials and README files of all packages before using this system. Take a look around the packages (each contains its own README), explore the launch files and be able to read the code, which we strive to keep readable. If issues arrise related to the brubotics systems open an issue [here](https://github.com/mrs-brubotics/droneswarm_brubotics/issues), if it is related to CTU's mrs_uav_system then open an issue [here](https://github.com/ctu-mrs/mrs_uav_system/issues).
+The primary source of documentation of this project is explained here [documentation package](https://github.com/mrs-brubotics/documentation_brubotics), but we also recommend going through [CTU's documentation](https://ctu-mrs.github.io/). We advise all new users to read through all tutorials and README files of all packages before using this system. Take a look around the packages (each contains its own README), explore the launch files, and be able to read the code, which we strive to keep readable. If issues arise related to the brubotics systems open an issue [here](https://github.com/mrs-brubotics/droneswarm_brubotics/issues), if it is related to CTU's mrs_uav_system then open an issue [here](https://github.com/ctu-mrs/mrs_uav_system/issues).
 The system follows a description presented in the article: TODO[add link to tutorial style article similar as ctu]
 
 ## Unmanned Aerial Vehicles
-The droneswarm_brubotics system is currently pre-configured for the following UAV platforms, operated by R&MM. The platforms are order by the size / payload capacity. TODO[add pictures similar as ctu]
+The droneswarm_brubotics system is currently pre-configured for the following UAV platforms, operated by R&MM. The platforms are ordered by the size/payload capacity. TODO[add pictures similar as ctu]
+* f450
+* t650
 
 ## Related packages
-TODO[add those similar as ctu] The following packages are not necessarily part of our automated installation. Therefore, you might need to clone them by yourself and place them in your ROS workspace. Some of those are forks of third party repositories.
+TODO[add those similar as ctu] The following packages are not necessarily part of our automatic installation. Therefore, you might need to clone some of them by yourself and place them in your ROS workspace. Some of those are forks of third-party repositories.
 * [__controllers_brubotics__](https://github.com/mrs-brubotics/controllers_brubotics): ROS
 * [__trackers_brubotics__](https://github.com/mrs-brubotics/trackers_brubotics): ROS
 * [__planners_brubotics__](https://github.com/mrs-brubotics/planners_brubotics): ROS
@@ -47,11 +49,10 @@ TODO[add those similar as ctu] The following packages are not necessarily part o
 * [__visualization_brubotics__](https://github.com/mrs-brubotics/visualization_brubotics): ROS
 * [__documentation_brubotics__](https://github.com/mrs-brubotics/testingdocumentation_brubotics)
 
-## Backwards compatibility and updates
-We do not guarantee backwards compatibility at any time. The platform is evolving according to the needs of the R&MM group. Updates can be made that are not going to be compatible with users local configs, simulation worlds, tmux sessions, etc. However, when we change something which requires user action to maintain compatibility, we will create an issue in this repository labelled users-read-me. Subscribe to this repository updates and issues by clicking the Watch button in the top-right corner of this page. Recent changes requiring user action:
-* TODO[add item 1]
-* Currently there are no known backwards incompatiblities.
-We adivse also to take a look at [backwards compatibility and updates of CTU](https://github.com/ctu-mrs/mrs_uav_system#backwards-compatibility-and-updates).
+## Backwards (in)compatibility and updates
+We do not guarantee backward compatibility at any time. The platform is evolving according to the needs of the R&MM group. Updates can be made that are not going to be compatible with users' local configs, simulation worlds, tmux sessions, etc. However, when we change something that requires user action to maintain compatibility, we will create an issue in this repository labeled users-read-me. Subscribe to this repository updates and issues by clicking the Watch button in the top-right corner of this page. Recent changes requiring user action:
+* WIP: the mrs_uav_system version 1.5 underwent many changes which makes that this system needs to be updated.
+We advise also to take a look at [backwards compatibility and updates of CTU](https://github.com/ctu-mrs/mrs_uav_system#backwards-compatibility-and-updates).
 
 ## Installation
 ### Singularity and Docker
