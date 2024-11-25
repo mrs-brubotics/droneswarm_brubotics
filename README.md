@@ -21,6 +21,7 @@ This project would not have been possible without the funding from:
 * FWO
 * imec
 * Flanders AI Research
+* euROBIN
 
 All packages are extensions or alternatives to those provided by the [Multi-robot Systems (MRS) Group of the CTU in Prague](https://github.com/ctu-mrs) and are organized in the same way. We mostly work with multi-rotor UAVs, and for them specifically, we developed this navigation, control, and estimation software. This can be tested both in simulation and on real-world robotic platforms. We believe that real-world and replicable experiments should support excellent research and science in robotics. Our platform is built to allow safe verification of these approaches in planning, control, estimation, computer vision, tracking, and more.
 
