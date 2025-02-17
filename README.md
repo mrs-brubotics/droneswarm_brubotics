@@ -1,19 +1,19 @@
 # droneswarm_brubotics
 The droneswarm_brubotics is an open-source software-hardware framework for reproducible research on certified safe aerial multi-robot systems.
-Some examples use case are:
+Some examples of its capabilities are:
 
 Distributed collision avoidance of quadrotors:
 ![alt text](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.fig/collision_avoidance_2F450s.png)
 ![alt text](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.fig/rviz_collision_avoidance.png)
 
-Collaborative payload transport with quadrotors
+Collaborative payload transport with quadrotors:
 ![alt text](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.fig/payload_transport_snapshots.png)
 
 <!--  *  TODO[give overview picture rviz, sim, reality] -->
 <!-- *  TODO[give overview of what this syste allows] -->
 <!--  *  TODO check symbolic link [explanation](https://github.com/panda-brubotics/safe_panda/blob/master/README.md) -->
 
-It is mainly developed at the Robotics and Multibody Mechanics (R&MM) research group of the Vrije Universiteit Brussel (VUB), Belgium, which is a member of VUB's Brussels Human Robotics Research Center (BruBotics). Some packages were developed in collaboration with the Robotics, Optimization, and Constrained Control (ROCC) group of the University of Colorado Boulder, USA.
+This framework is mainly developed at the Robotics and Multibody Mechanics (R&MM) research group of the Vrije Universiteit Brussel (VUB), Belgium, which is a member of VUB's Brussels Human Robotics Research Center (BruBotics). Some packages were developed in collaboration with the Robotics, Optimization, and Constrained Control (ROCC) group of the University of Colorado Boulder, USA.
 
 The main project owners and collaborators are:
 * Bryan Convens ([bryan.convens@vub.be](mailto:bryan.convens@vub.be)): project owner, postdoc at R&MM;
