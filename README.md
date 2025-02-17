@@ -16,9 +16,9 @@ Collaborative payload transport with quadrotors:
 This framework is mainly developed at the Robotics and Multibody Mechanics (R&MM) research group of the Vrije Universiteit Brussel (VUB), Belgium, which is a member of VUB's Brussels Human Robotics Research Center (BruBotics). Some packages were developed in collaboration with the Robotics, Optimization, and Constrained Control (ROCC) group of the University of Colorado Boulder, USA.
 
 The main project owners and collaborators are:
-* Bryan Convens ([bryan.convens@vub.be](mailto:bryan.convens@vub.be)): project owner, postdoc at R&MM;
-* Kelly Merckaert: project co-owner, a postdoc at R&MM;
-* Several MA2 students and interns at R&MM have contributed to this project.
+* Bryan Convens ([bryan.convens@vub.be](mailto:bryan.convens@vub.be)): project owner, FWO postdoc at R&MM;
+* Kelly Merckaert: project co-owner, FWO postdoc at R&MM;
+* Several Master thesis students and interns at R&MM have contributed to this project.
 
 This project would not have been possible without the funding from:
 * FWO for PhD and postdoc fellowships
