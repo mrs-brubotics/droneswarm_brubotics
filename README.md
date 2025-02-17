@@ -1,9 +1,11 @@
 # droneswarm_brubotics
 The droneswarm_brubotics is an open-source software-hardware framework for reproducible research on certified safe aerial multi-robot systems.
 Some examples use case are:
+
 Distributed collision avoidance of quadrotors:
 ![alt text](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.fig/collision_avoidance_2F450s.png)
 ![alt text](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.fig/rviz_collision_avoidance.png)
+
 Collaborative payload transport with quadrotors
 ![alt text](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.fig/payload_transport_snapshots.png)
 
