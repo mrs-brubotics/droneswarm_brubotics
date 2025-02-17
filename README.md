@@ -1,12 +1,12 @@
-# droneswarm_brubotics system
+# droneswarm_brubotics
 ![alt text](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.fig/collision_avoidance_2F450s.png)
 ![alt text](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.fig/rviz_collision_avoidance.png)
 
-*  TODO[give overview picture rviz, sim, reality]
-*  TODO[give overview of what this syste allows]
-*  TODO check symbolic link [explanation](https://github.com/panda-brubotics/safe_panda/blob/master/README.md) 
+<!--  *  TODO[give overview picture rviz, sim, reality] -->
+<!-- *  TODO[give overview of what this syste allows] -->
+<!--  *  TODO check symbolic link [explanation](https://github.com/panda-brubotics/safe_panda/blob/master/README.md) -->
 
-The droneswarm_brubotics system is a software framework for fundamental and applied research in robotics, automation, control, and AI with a focus on multi-robot systems composed of Unmanned Aerial vehicles (UAVs).
+The droneswarm_brubotics system is a software framework for fundamental and applied research in robotics, automation, control, and AI, focusing on multi-robot systems composed of Unmanned Aerial vehicles (UAVs).
 
 It is mainly developed at the Robotics and Multibody Mechanics (R&MM) research group of the Vrije Universiteit Brussel (VUB), Belgium, which is a member of VUB's Brussels Human Robotics Research Center (BruBotics) consortium. Several of the packages were developed in collaboration with the Robotics, Optimization, and Constrained Control (ROCC) lab of the University of Colorado Boulder, USA.
 
