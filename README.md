@@ -1,6 +1,7 @@
 # droneswarm_brubotics
 ![alt text](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.fig/collision_avoidance_2F450s.png)
 ![alt text](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.fig/rviz_collision_avoidance.png)
+![alt text](https://github.com/mrs-brubotics/droneswarm_brubotics/blob/master/.fig/payload_transport_snapshots.png)
 
 <!--  *  TODO[give overview picture rviz, sim, reality] -->
 <!-- *  TODO[give overview of what this syste allows] -->
