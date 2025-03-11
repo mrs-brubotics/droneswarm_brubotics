@@ -30,9 +30,9 @@ fi
 #echo "$0: updating all ctu-mrs and mrs-brubotics files"
 #./pull_all.sh  # we cannot checkout at ctu's master branches at all times (current bug in their altitude)
 
-echo "$0: building the mrs_workspace"
-cd ~/mrs_workspace
-catkin build # add -j2 for easier compilation
+# echo "$0: building the mrs_workspace"
+# cd ~/mrs_workspace
+# catkin build # add -j2 for easier compilation
 
 echo "$0: cloning non-default ctu packages to the workspace"
 cd "$MY_PATH"
