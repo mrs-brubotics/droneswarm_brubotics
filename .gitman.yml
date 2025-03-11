@@ -13,7 +13,7 @@ sources:
       - git submodule update --init --recursive
   - repo: git@github.com:mrs-brubotics/controllers_brubotics.git
     name: controllers_brubotics
-    rev: MJ_Fix_Config_Files_Issue #master
+    rev: master
     type: git
     sparse_paths:
       -
@@ -75,7 +75,7 @@ sources_locked:
 # ROS packages:
   - repo: git@github.com:mrs-brubotics/controllers_brubotics.git
     name: controllers_brubotics
-    rev: RaphaelMerge
+    rev: MJ_Fix_Config_Files_Issue #RaphaelMerge
     type: git
     sparse_paths:
       -
@@ -85,7 +85,7 @@ sources_locked:
       - git submodule update --init --recursive
   - repo: git@github.com:mrs-brubotics/trackers_brubotics.git
     name: trackers_brubotics
-    rev: MergeRaphael
+    rev: MJ_Fix_Build_Issue #MergeRaphael
     type: git
     sparse_paths:
       -
@@ -95,7 +95,7 @@ sources_locked:
       - git submodule update --init --recursive
   - repo: git@github.com:mrs-brubotics/testing_brubotics.git
     name: testing_brubotics
-    rev: RaphaelMerge
+    rev: MJ_Fix_Tmux_Pane_Commands #RaphaelMerge
     type: git
     sparse_paths:
       -
