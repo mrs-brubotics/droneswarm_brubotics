@@ -13,7 +13,7 @@ sources:
       - git submodule update --init --recursive
   - repo: git@github.com:mrs-brubotics/controllers_brubotics.git
     name: controllers_brubotics
-    rev: master
+    rev: MJ_Fix_Config_Files_Issue #master
     type: git
     sparse_paths:
       -
